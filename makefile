@@ -1,18 +1,30 @@
-all: main.o utils.o utils.h
-	g++ -o main main.o utils.o
+# Directories
+SRC := ./src
+OBJ := ./obj
+BIN := ./bin
 
-main.o: main.cpp utils.h
-	g++ -c main.cpp
+# Files
+SRC_FILES := $(wildcard $(SRC)/*.cpp)
+OBJ_FILES := $(patsubst $(SRC)/%.cpp, $(OBJ)/%.o, $(SRC_FILES))
+BIN_FILES := $(BIN)/main
 
-utils.o: utils.cpp utils.h
-	g++ -c utils.cpp
+# Making Executable
+all: $(OBJ_FILES)
+	mkdir -p $(BIN)
+	g++ -o $(BIN_FILES) $^
 
-run:
-	./main
-	convert test.ppm test.png
+# Making Object Files
+$(OBJ)/%.o: $(SRC)/%.cpp
+	mkdir -p $(OBJ)
+	g++ -o $@ -c $<
 
+# Running Program
+run: $(BIN_FILES)
+	$(BIN_FILES)
+
+# Cleaning Files
 clean:
-	rm *.o
-	rm *.ppm
-	rm *.png
-	rm main
+	rm -rf $(OBJ);
+	rm -rf $(BIN);
+	rm *.ppm;
+	rm *.png;
