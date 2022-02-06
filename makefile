@@ -21,6 +21,8 @@ $(OBJ)/%.o: $(SRC)/%.cpp
 # Running Program
 run: $(BIN_FILES)
 	$(BIN_FILES)
+	convert test.ppm test.png;
+	display test.png;
 
 # Cleaning Files
 clean:

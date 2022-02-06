@@ -49,12 +49,9 @@ std::ostream& operator<<(std::ostream& os, picture& p) {
 	return os;
 }
 
-
-
-//Random util
-void print (picture& p, std::string s) {
+void picture::to_ppm (std::string s) {
 	std::ofstream os;
 	os.open(s + ".ppm");
-	os << p;
+	os << *this;
 	os.close();
 }

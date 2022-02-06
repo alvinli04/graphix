@@ -27,10 +27,9 @@ public:
     picture (int width, int height);
 	std::vector<color>& operator[](int index);
     friend std::ostream& operator<<(std::ostream& os, picture const& p);
+	void to_ppm (std::string s);
 
 };  
 
-
-void print(picture& p, std::string s);
 
 #endif

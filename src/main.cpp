@@ -10,5 +10,5 @@ int main () {
         }
     }
     
-    print(p, "test"); 
+    p.to_ppm("test"); 
 }
