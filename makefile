@@ -1,3 +1,4 @@
+.SILENT:
 # Directories
 SRC := ./src
 OBJ := ./obj
