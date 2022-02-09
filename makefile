@@ -12,7 +12,7 @@ BIN_FILES := $(BIN)/graphix
 # Making Executable And Running
 all: $(OBJ_FILES)
 	mkdir -p $(BIN)
-	g++ -o $(BIN_FILES) $^
+	g++ -std=c++14 -o $(BIN_FILES) $^
 	$(BIN_FILES)
 	convert test.ppm test.png;
 	display test.png;
