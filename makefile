@@ -20,7 +20,7 @@ all: $(OBJ_FILES)
 # Making Object Files
 $(OBJ)/%.o: $(SRC)/%.cpp
 	mkdir -p $(OBJ)
-	g++ -o -std=c++14 $@ -c $<
+	g++ -std=c++14 -o $@ -c $<
 
 # Cleaning Files
 clean:
