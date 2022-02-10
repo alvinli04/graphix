@@ -62,11 +62,6 @@ void picture::clear () {
 	}
 }
 
-// Draws line from (x0, y0) -> (x1, y1)
-void line (int x0, int y0, int x1, int y1, color c) {
-	return;
-}
-
 // Getter method
 std::vector<color>& picture::operator[](int index) {
 	assert (index < grid.size());

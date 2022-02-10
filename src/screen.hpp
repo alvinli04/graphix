@@ -31,7 +31,6 @@ public:
     picture (int width, int height);
 
     void clear ();
-    void line (int x0, int y0, int x1, int y1, color c);
 
 	std::vector<color>& operator[](int index);
     friend std::ostream& operator<<(std::ostream& os, picture const& p);
