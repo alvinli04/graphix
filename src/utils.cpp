@@ -62,6 +62,11 @@ void picture::clear () {
 	}
 }
 
+// Draws line from (x0, y0) -> (x1, y1)
+void line (int x0, int y0, int x1, int y1, color c) {
+	return;
+}
+
 // Getter method
 std::vector<color>& picture::operator[](int index) {
 	assert (index < grid.size());
@@ -72,7 +77,7 @@ std::vector<color>& picture::operator[](int index) {
 std::ostream& operator<<(std::ostream& os, picture& p) {
 	os << "P3\n" << p.height << " " << p.width << "\n255\n";
 
-	for (int i = p.height - 1; i >= 0; --i) {
+	for (int i = 0; i < p.height; ++i) {
 		for (int j = 0; j < p.width; ++j) {
 			os << p[i][j] << " ";
 		}
