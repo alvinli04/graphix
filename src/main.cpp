@@ -1,9 +1,10 @@
 #include <cmath>
 #include <iostream>
 #include "utils.hpp"
-
+#include "color_constants.hpp"
 
 int main () {
+	/*
     picture p(1000, 1000);
 	
     for (int i = 0; i < p.height; ++i) {
@@ -31,4 +32,16 @@ int main () {
     }
     
     p.to_ppm("test"); 
+	*/
+
+	picture p (500, 500);
+
+	for (int i = 0; i < p.height; ++i)
+		for (int j = 0; j < p.width; ++j)
+			p[i][j].set(color(255, 59, 0));
+
+	p.clear();
+	
+	p.to_ppm("test");
+
 }
