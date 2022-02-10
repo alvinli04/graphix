@@ -1,7 +1,6 @@
-#ifndef COLOR_H
-#define COLOR_H
+#pragma once
 
-#include "utils.hpp"
+#include "screen.hpp"
 
 const color BLACK (0, 0, 0);
 const color WHITE (255, 255, 255);
@@ -20,4 +19,3 @@ const color PURPLE (128, 0, 128);
 const color TEAL (0, 128, 128);
 const color NAVY (0, 0, 128);
 
-#endif

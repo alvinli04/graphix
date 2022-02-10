@@ -1,6 +1,6 @@
 #include <cmath>
 #include <iostream>
-#include "utils.hpp"
+#include "screen.hpp"
 #include "color_constants.hpp"
 
 int main () {

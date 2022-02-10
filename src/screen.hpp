@@ -1,5 +1,4 @@
-#ifndef UTILS_H
-#define UTILS_H
+#pragma once
 
 #include <vector>
 #include <string>
@@ -40,5 +39,3 @@ public:
 
 };  
 
-
-#endif

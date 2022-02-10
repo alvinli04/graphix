@@ -5,7 +5,7 @@
 #include <cassert>
 #include <iostream>
 #include <string.h>
-#include "utils.hpp"
+#include "screen.hpp"
 #include "color_constants.hpp"
 
 // Color functions
