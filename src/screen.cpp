@@ -46,11 +46,17 @@ std::ostream& operator<<(std::ostream& os, color const& c){
 //Picture functions
 // ------------------------------
 
-// Constructor
+// Constructors
+picture::picture () {
+	width = 500;
+	height = 500;
+	grid.resize (height, std::vector<color> (width));
+}
+
 picture::picture (int n_width, int n_height) {
 	width = n_width;
 	height = n_height;
-	grid.resize(height, std::vector<color> (width));
+	grid.resize (height, std::vector<color> (width));
 }
 
 // Clears screen
@@ -72,11 +78,11 @@ std::vector<color>& picture::operator[](int index) {
 std::ostream& operator<<(std::ostream& os, picture& p) {
 	os << "P3\n" << p.height << " " << p.width << "\n255\n";
 
-	for (int i = 0; i < p.height; ++i) {
+	for (int i = p.height - 1; i >= 0; --i) {
 		for (int j = 0; j < p.width; ++j) {
 			os << p[i][j] << " ";
 		}
-		if (i < p.height - 1) os << "\n";
+		if (i > 0) os << "\n";
 	}
 	return os;
 }

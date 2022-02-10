@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 
+
 class color {
 
 public:
@@ -28,6 +29,7 @@ public:
     int height;
 	std::vector<std::vector<color>> grid;
 
+	picture ();
     picture (int width, int height);
 
     void clear ();
