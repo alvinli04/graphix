@@ -16,7 +16,7 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 	int A = y1 - y0;
 	int B = x0 - x1;
 
-	if (y1 >= y0 && y1 - y0 <= x1 - x0) {
+	if (y1 >= y0 && A <= B * -1) {
 		// octant 1
 		int D = 2 * A + B;
 
@@ -44,7 +44,7 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 			++y;
 			D += 2 * B;
 		}
-	} else if (y0 - y1 <= x1 - x0) {
+	} else if (A >= B) {
 		// octant 8
 		int D = 2 * A - B;
 
@@ -73,12 +73,5 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 		}
 	}
 }
-
-
-
-
-
-
-
 
 
