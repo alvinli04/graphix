@@ -25,7 +25,7 @@ void tree (int itr, int x, int y, double dir, int len, picture& p) {
 int main () {
 	
     picture s(N, N);
-	
+
 	tree (15, 500, 150, PI/2, 200, s);
 
     s.to_ppm("test"); 

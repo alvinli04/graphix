@@ -5,6 +5,7 @@
 #include <cassert>
 #include <iostream>
 #include <string.h>
+#include <cstdint>
 #include "screen.hpp"
 #include "color_constants.hpp"
 
@@ -19,16 +20,16 @@ color::color () {
 }
 
 color::color (int r, int g, int b) {
-	red = r % 256;
-	green = g % 256;
-	blue = b % 256;
+	red = r;
+	green = g;
+	blue = b;
 }
 
 // Sets rgb values for a color
 void color::set (int r, int g, int b) {
-	red = r % 256;
-	green = g % 256;
-	blue = b % 256;
+	red = r;
+	green = g;
+	blue = b;
 }
 
 void color::set(const color& c) {
@@ -39,7 +40,7 @@ void color::set(const color& c) {
 
 // prints the color in "red green blue" format for ppms
 std::ostream& operator<<(std::ostream& os, color const& c){
-	return (os << c.red << " " << c.green << " " << c.blue);
+	return (os << +c.red << " " << +c.green << " " << +c.blue);
 }
 
 

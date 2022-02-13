@@ -2,14 +2,14 @@
 
 #include <vector>
 #include <string>
-
+#include <cstdint>
 
 class color {
 
 public:
-    int red;
-    int green;
-    int blue;
+    uint8_t red;
+    uint8_t green;
+    uint8_t blue;
     
     color ();
 	color (int r, int g, int b);
