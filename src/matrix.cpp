@@ -97,6 +97,14 @@ void edgelist::add_edge (double x0, double y0, double z0, double x1, double y1, 
 	add_point (x1, y1, z1);
 }
 
+// Set equal to a matrix
+edgelist& edgelist::operator*=(const matrix& m) {
+	matrix res = m * (*this);
+	this->V = res.V;
+	this->rows = res.rows;
+	this->cols = res.cols;
+	return *this;
+}
 
 
 

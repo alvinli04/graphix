@@ -29,4 +29,6 @@ public:
 	void add_point (double x, double y, double z);
 	void add_edge (double x0, double y0, double z0, double x1, double y1, double z1);
 
+	edgelist& operator*=(const matrix& m);
+
 };
