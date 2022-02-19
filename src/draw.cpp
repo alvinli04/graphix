@@ -1,7 +1,10 @@
 #include <algorithm>
 #include <iostream>
+
+#include "matrix.hpp"
 #include "screen.hpp"
 #include "draw.hpp"
+
 
 // Draws a line from (x0, y0) to (x1, y1)
 void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
@@ -75,3 +78,8 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 }
 
 
+void draw_lines (edgelist& points, picture& p, const color& c) {
+	for (int i = 0; i < points.cols - 1; i += 2) {
+		draw_line (points[0][i], points[1][i], points[0][i+1], points[1][i+1], p, c);
+	}
+}

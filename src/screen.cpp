@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string.h>
 #include <cstdint>
+
 #include "screen.hpp"
 #include "color_constants.hpp"
 
