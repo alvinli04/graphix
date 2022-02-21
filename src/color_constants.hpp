@@ -18,4 +18,6 @@ const color GREEN (0, 128, 0);
 const color PURPLE (128, 0, 128);
 const color TEAL (0, 128, 128);
 const color NAVY (0, 0, 128);
+const color PINK (255, 105, 180);
+const color ORANGE (255, 215, 0);
 

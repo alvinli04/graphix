@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <cassert>
+#include <cmath>
 
 #include "matrix.hpp"
 
@@ -12,6 +13,7 @@
 // Constructors
 matrix::matrix () {
 	rows = 4;
+	cols = 0;
 	V.resize (4);
 }
 
@@ -69,6 +71,7 @@ matrix operator*(matrix a, const matrix& b) {
 	return a *= b;
 }
 
+// Turns a matrix into the identity matrix
 void ident (matrix& m) {
 	assert (m.rows == m.cols);
 
@@ -78,6 +81,19 @@ void ident (matrix& m) {
 		m[i][i] = 1;
 	}
 }
+
+// Turns a matrix into a rotation matrix
+void rot (matrix&m, double theta) {	
+	assert (m.rows == m.cols);
+
+	ident (m);
+
+	m[0][0] = std::cos (theta);
+	m[0][1] = std::sin (theta) * -1;
+	m[1][0] = std::sin (theta);
+	m[1][1] = std::cos (theta);
+}
+
 
 // Edge list functions
 // -----------------------------------------------
@@ -106,7 +122,17 @@ edgelist& edgelist::operator*=(const matrix& m) {
 	return *this;
 }
 
-
+void edgelist::translate (double x, double y, double z) {
+	for (double& a : V[0]) {
+		a += x;
+	}
+	for (double& a : V[1]) {
+		a += y;
+	}
+	for (double& a : V[2]) {
+		a += z;
+	}
+}
 
 
 

@@ -22,12 +22,14 @@ public:
 };
 
 void ident (matrix& m);
+void rot (matrix& m, double theta);
 
 class edgelist: public matrix {
 
 public:
 	void add_point (double x, double y, double z);
 	void add_edge (double x0, double y0, double z0, double x1, double y1, double z1);
+	void translate (double x, double y, double z = 0);
 
 	edgelist& operator*=(const matrix& m);
 
