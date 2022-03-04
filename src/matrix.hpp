@@ -24,8 +24,8 @@ public:
 };
 
 void ident (matrix& m);
-matrix move (double tx, double ty, double tz);
-matrix scale (double sx, double sy, double sz);
+matrix move (double x, double y, double z);
+matrix scale (double x, double y, double z);
 matrix rot_x (double theta);
 matrix rot_y (double theta);
 matrix rot_z (double theta);

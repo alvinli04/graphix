@@ -5,19 +5,19 @@
 #include "draw.hpp"
 #include "color_constants.hpp"
 #include "matrix.hpp"
+#include "parser.hpp"
 
-#define N 500
-#define PI 3.1415926535
-
-
+const int N = 500;
 
 int main () {
 
-    picture s (N, N);
+    picture S (N, N);
+	edgelist E; // Edgelist that holds all edges
+	matrix M (4,4); // Keeps track of all transformations
 
-	matrix T (4,4);
-	ident (T);
+	parse_file ("test.in", M, E, S);
 
-    s.to_ppm("test");
+
+    S.to_ppm ("test");
 
 }

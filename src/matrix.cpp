@@ -83,22 +83,22 @@ void ident (matrix& m) {
 }
 
 // translation matrix
-matrix move (double tx, double ty, double tz) {
+matrix move (double x, double y, double z) {
 	matrix m (4,4);
 	ident (m);
-	m[0][3] = tx;
-	m[1][3] = ty;
-	m[2][3] = tz;
+	m[0][3] = x;
+	m[1][3] = y;
+	m[2][3] = z;
 	return m;
 }
 
 // scale matrix
-matrix scale (double sx, double sy, double sz) {
+matrix scale (double x, double y, double z) {
 	matrix m (4,4);
 	ident (m);
-	m[0][0] = sx;
-	m[1][1] = sy;
-	m[2][2] = sz;
+	m[0][0] = x;
+	m[1][1] = y;
+	m[2][2] = z;
 	return m;
 }
 
@@ -106,7 +106,11 @@ matrix scale (double sx, double sy, double sz) {
 matrix rot_x (double theta) {
 	matrix m (4,4);
 	ident (m);
-
+	double angle = theta * PI / 180;
+	m[1][1] = std::cos (angle);
+	m[1][2] = -std::sin (angle);
+	m[2][1] = std::sin (angle);
+	m[2][2] = std::cos (angle);
 	return m;
 }
 
@@ -114,7 +118,11 @@ matrix rot_x (double theta) {
 matrix rot_y (double theta) {
 	matrix m (4,4);
 	ident (m);
-
+	double angle = theta * PI / 180;
+	m[0][0] = std::cos (angle);
+	m[0][2] = -std::sin (angle);
+	m[2][0] = std::sin (angle);
+	m[2][2] = std::cos (angle);
 	return m;
 }
 
@@ -122,7 +130,11 @@ matrix rot_y (double theta) {
 matrix rot_z (double theta) {
 	matrix m (4,4);
 	ident (m);
-
+	double angle = theta * PI / 180;
+	m[0][0] = std::cos (angle);
+	m[0][1] = -std::sin (angle);
+	m[1][0] = std::sin (angle);
+	m[1][1] = std::cos (angle);
 	return m;
 }
 
