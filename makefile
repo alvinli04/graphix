@@ -13,8 +13,6 @@ all: $(OBJ_FILES)
 	mkdir -p $(BIN)
 	g++ -std=c++14 -o $(BIN_FILES) $^
 	$(BIN_FILES)
-	convert test.ppm test.png;
-	display test.png;
 
 # Making Object Files
 $(OBJ)/%.o: $(SRC)/%.cpp

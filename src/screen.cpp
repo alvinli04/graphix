@@ -33,7 +33,7 @@ void color::set (int r, int g, int b) {
 	blue = b;
 }
 
-void color::set(const color& c) {
+void color::set (const color& c) {
 	red = c.red;
 	green = c.green;
 	blue = c.blue;

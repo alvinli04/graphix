@@ -14,10 +14,7 @@ int main () {
     picture S (N, N);
 	edgelist E; // Edgelist that holds all edges
 	matrix M (4,4); // Keeps track of all transformations
+    ident (M);
 
 	parse_file ("test.in", M, E, S);
-
-
-    S.to_ppm ("test");
-
 }

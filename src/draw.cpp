@@ -13,7 +13,7 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 		std::swap (x0, x1);
 		std::swap (y0, y1);
 	}
-	
+
 	int x = x0;
 	int y = y0;
 	int A = y1 - y0;
@@ -24,7 +24,9 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 		int D = 2 * A + B;
 
 		while (x <= x1) {
-			p[y][x].set(c);
+			if (0 <= y && y < p.height && 0 <= x && x < p.width) {
+				p[y][x].set(c);
+			}
 			if (D > 0) {
 				D += 2 * B;
 				++y;
@@ -38,7 +40,9 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 		int D = A + 2 * B;
 
 		while (y <= y1) {
-			p[y][x].set(c);
+			if (0 <= y && y < p.height && 0 <= x && x < p.width) {
+				p[y][x].set(c);
+			}
 			if (D < 0) {
 				D += 2 * A;
 				++x;
@@ -52,7 +56,9 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 		int D = 2 * A - B;
 
 		while (x <= x1) {
-			p[y][x].set(c);
+			if (0 <= y && y < p.height && 0 <= x && x < p.width) {
+				p[y][x].set(c);
+			}
 			if (D < 0) {
 				D -= 2 * B;
 				--y;
@@ -65,7 +71,9 @@ void draw_line (int x0, int y0, int x1, int y1, picture& p, const color& c) {
 		int D = A - 2 * B;
 
 		while (y >= y1) {
-			p[y][x].set(c);
+			if (0 <= y && y < p.height && 0 <= x && x < p.width) {
+				p[y][x].set(c);
+			}
 			if (D > 0) {
 				D += 2 * A;
 				++x;
