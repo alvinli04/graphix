@@ -12,7 +12,7 @@ BIN_FILES := $(BIN)/graphix
 all: $(OBJ_FILES)
 	mkdir -p $(BIN)
 	g++ -std=c++14 -o $(BIN_FILES) $^
-	$(BIN_FILES)
+	$(BIN_FILES) test.in
 
 # Making Object Files
 $(OBJ)/%.o: $(SRC)/%.cpp
