@@ -49,7 +49,7 @@ std::ostream& operator<<(std::ostream& os, matrix const& m) {
 // Matrix Multiplication
 matrix& matrix::operator*=(const matrix& m) {
 	assert (cols == m.rows);
-	
+
 	matrix res (rows, m.cols);
 	for (int i = 0; i < rows; ++i) {
 		for (int j = 0; j < m.cols; ++j) {
@@ -82,8 +82,53 @@ void ident (matrix& m) {
 	}
 }
 
-// Turns a matrix into a rotation matrix
-void rot (matrix&m, double theta) {	
+// translation matrix
+matrix move (double tx, double ty, double tz) {
+	matrix m (4,4);
+	ident (m);
+	m[0][3] = tx;
+	m[1][3] = ty;
+	m[2][3] = tz;
+	return m;
+}
+
+// scale matrix
+matrix scale (double sx, double sy, double sz) {
+	matrix m (4,4);
+	ident (m);
+	m[0][0] = sx;
+	m[1][1] = sy;
+	m[2][2] = sz;
+	return m;
+}
+
+// x rotation matrix
+matrix rot_x (double theta) {
+	matrix m (4,4);
+	ident (m);
+
+	return m;
+}
+
+// y rotation matrix
+matrix rot_y (double theta) {
+	matrix m (4,4);
+	ident (m);
+
+	return m;
+}
+
+// z rotation matrix
+matrix rot_z (double theta) {
+	matrix m (4,4);
+	ident (m);
+
+	return m;
+}
+
+// Turns a matrix into a rotation matrix (Deprecated)
+/*
+void rot (matrix&m, double theta) {
 	assert (m.rows == m.cols);
 
 	ident (m);
@@ -93,6 +138,7 @@ void rot (matrix&m, double theta) {
 	m[1][0] = std::sin (theta);
 	m[1][1] = std::cos (theta);
 }
+*/
 
 
 // Edge list functions
@@ -122,6 +168,7 @@ edgelist& edgelist::operator*=(const matrix& m) {
 	return *this;
 }
 
+/* Deprecated translation function
 void edgelist::translate (double x, double y, double z) {
 	for (double& a : V[0]) {
 		a += x;
@@ -133,10 +180,4 @@ void edgelist::translate (double x, double y, double z) {
 		a += z;
 	}
 }
-
-
-
-
-
-
-
+*/

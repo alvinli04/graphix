@@ -3,6 +3,8 @@
 #include <vector>
 #include <ostream>
 
+const double PI = 3.1415926535;
+
 class matrix {
 
 public:
@@ -22,14 +24,19 @@ public:
 };
 
 void ident (matrix& m);
-void rot (matrix& m, double theta);
+matrix move (double tx, double ty, double tz);
+matrix scale (double sx, double sy, double sz);
+matrix rot_x (double theta);
+matrix rot_y (double theta);
+matrix rot_z (double theta);
+//void rot (matrix& m, double theta);
 
 class edgelist: public matrix {
 
 public:
 	void add_point (double x, double y, double z);
 	void add_edge (double x0, double y0, double z0, double x1, double y1, double z1);
-	void translate (double x, double y, double z = 0);
+	//void translate (double x, double y, double z = 0);
 
 	edgelist& operator*=(const matrix& m);
 

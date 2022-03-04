@@ -12,10 +12,12 @@
 
 
 int main () {
-	
-    picture s(N, N);
 
+    picture s (N, N);
 
-    s.to_ppm("test"); 
-	
+	matrix T (4,4);
+	ident (T);
+
+    s.to_ppm("test");
+
 }
