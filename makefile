@@ -2,6 +2,7 @@
 SRC := ./src
 OBJ := ./obj
 BIN := ./bin
+IMG := ./img
 
 # Files
 SRC_FILES := $(wildcard $(SRC)/*.cpp)
@@ -11,6 +12,7 @@ BIN_FILES := $(BIN)/graphix
 # Making Executable And Running
 all: $(OBJ_FILES)
 	mkdir -p $(BIN)
+	mkdir -p $(IMG)
 	g++ -std=c++14 -o $(BIN_FILES) $^
 	$(BIN_FILES) test.in
 
@@ -23,5 +25,4 @@ $(OBJ)/%.o: $(SRC)/%.cpp
 clean:
 	rm -rf $(OBJ);
 	rm -rf $(BIN);
-	rm *.ppm;
-	rm *.png;
+	rm -rf $(IMG);
