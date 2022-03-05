@@ -2,8 +2,9 @@
 
 #include <vector>
 #include <ostream>
+#include <math.h>
 
-const double PI = 3.1415926535;
+const double PI = acos ((double) -1);
 
 class matrix {
 

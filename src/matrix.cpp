@@ -120,8 +120,8 @@ matrix rot_y (double theta) {
 	ident (m);
 	double angle = theta * PI / 180;
 	m[0][0] = std::cos (angle);
-	m[0][2] = -std::sin (angle);
-	m[2][0] = std::sin (angle);
+	m[0][2] = std::sin (angle);
+	m[2][0] = -std::sin (angle);
 	m[2][2] = std::cos (angle);
 	return m;
 }

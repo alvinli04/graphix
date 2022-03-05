@@ -47,17 +47,20 @@ void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 		} else if (cmd == "display") {
 			S.clear ();
 			draw_lines (E, S, WHITE);
-			S.to_ppm ("test");
-			std::system ("display test.ppm");
-			std::system ("rm test.ppm");
+			S.to_ppm ("/tmp/test");
+			std::system ("display /tmp/test.ppm");
 		} else if (cmd == "save") {
 			std::string fname;
 			fin >> fname;
 			S.clear ();
 			draw_lines (E, S, WHITE);
+			fname = "img/" + fname;
 			S.to_ppm (fname);
+			std::string fsave = "convert " + fname + ".ppm " + fname;
+			std::system (fsave.c_str ());
+			std::string fdel = "rm " + fname + ".ppm";
+			std::system (fdel.c_str ());
 		}
-		// std::cout << cmd << std::endl;
 	}
 
 	fin.close ();
