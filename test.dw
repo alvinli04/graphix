@@ -59,21 +59,942 @@ line
 line
 400 100 300 400 200 300
 line
-100 200 0 100 200 200
+100 200 0 100 200 100
 line
-100 300 0 100 300 200
+100 300 100 100 300 200
 line
-100 400 0 100 400 200
+100 400 200 100 400 300
 line
-200 200 0 200 200 200
+200 200 0 200 200 100
 line
-200 300 0 200 300 200
+200 300 100 200 300 200
 line
-200 400 0 200 400 200
+200 400 200 200 400 300
 line
-200 100 0 200 100 200
+200 100 0 200 100 100
 line
-200 200 0 200 200 200
+200 200 100 200 200 200
 line
-200 300 0 200 300 200
-display
+200 300 200 200 300 300
+line
+300 200 100 300 200 200
+line
+300 300 200 300 300 300
+line
+300 100 100 300 100 200
+line
+300 200 200 300 200 300
+line
+400 200 200 400 200 300
+line
+400 100 200 400 100 300
+ident
+move
+-200 0 -300
+rotate
+y 45
+rotate
+x -30
+move
+320 100 400
+apply
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame00.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame01.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame02.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame03.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame04.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame05.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame06.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame07.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame08.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame09.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame10.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame11.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame12.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame13.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame14.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame15.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame16.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame17.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame18.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame19.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame20.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame21.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame22.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame23.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame24.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame25.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame26.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame27.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame28.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame29.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame30.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame31.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame32.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame33.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame34.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame35.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame36.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame37.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame38.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame39.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame40.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame41.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame42.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame43.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame44.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame45.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame46.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame47.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame48.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame49.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame50.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame51.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame52.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame53.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame54.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame55.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame56.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame57.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame58.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame59.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame60.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame61.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame62.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame63.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame64.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame65.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame66.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame67.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame68.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame69.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame70.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame71.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame72.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame73.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame74.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame75.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame76.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame77.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame78.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame79.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame80.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame81.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame82.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame83.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame84.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame85.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame86.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame87.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame88.png
+ident
+move
+-320 -100 -400
+rotate
+y 4
+move
+320 100 400
+apply
+save
+frame89.png
