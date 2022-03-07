@@ -14,7 +14,7 @@ all: $(OBJ_FILES)
 	mkdir -p $(BIN)
 	mkdir -p $(IMG)
 	g++ -std=c++14 -o $(BIN_FILES) $^
-	$(BIN_FILES) test.in
+	$(BIN_FILES) test.dw
 
 # Making Object Files
 $(OBJ)/%.o: $(SRC)/%.cpp
