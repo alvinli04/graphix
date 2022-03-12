@@ -9,6 +9,7 @@
 #include "draw.hpp"
 #include "screen.hpp"
 #include "color_constants.hpp"
+#include "parametric.hpp"
 
 void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 	std::ifstream fin (filename);
@@ -42,6 +43,18 @@ void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 			} else if (axis == 'z') {
 				M = rot_z (theta) * M;
 			}
+		} else if (cmd == "circle") {
+			double cx, cy, cz, r;
+			fin >> cx >> cy >> cz >> r;
+			circle (cx, cy, cz, r, E);	
+		} else if (cmd == "hermite") {
+			double x0, y0, x1, y1, rx0, ry0, rx1, ry1;
+			fin >> x0 >> y0 >> x1 >> y1 >> rx0 >> ry0 >> rx1 >> ry1;
+			hermite (x0, y0, x1, y1, rx0, ry0, rx1, ry1, E);
+		} else if (cmd == "bezier") {
+			double x0, y0, x1, y1, x2, y2, x3, y3;
+			fin >> x0 >> y0 >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+			bezier (x0, y0, x1, y1, x2, y2, x3, y3, E);
 		} else if (cmd == "apply") {
 			E *= M;
 		} else if (cmd == "display") {

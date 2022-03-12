@@ -23,6 +23,12 @@ matrix::matrix (int rows, int cols) {
 	V.resize (rows, std::vector<double> (cols));
 }
 
+matrix::matrix (std::vector<std::vector<double>> v) {
+	this->rows = v.size();
+	this->cols = v[0].size();
+	V = v;
+}
+
 //Clear
 void matrix::clear () {
 	V = std::vector<std::vector<double>> (rows, std::vector<double> (cols, 0));

@@ -14,6 +14,7 @@ public:
 
 	matrix ();
 	matrix (int rows, int cols);
+	matrix (std::vector<std::vector<double>> v);
 
 	void clear ();
 
