@@ -18,7 +18,10 @@ void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 	S.clear ();
 	std::string cmd;
 	while (fin >> cmd) {
-		if (cmd == "line") {
+		if (cmd[0] == '#') {
+			//skip the line
+			fin.ignore(256, '\n');
+		} else if (cmd == "line") {
 			double x0, y0, z0, x1, y1, z1;
 			fin >> x0 >> y0 >> z0 >> x1 >> y1 >> z1;
 			E.add_edge (x0, y0, z0, x1, y1, z1);
@@ -55,6 +58,20 @@ void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 			double x0, y0, x1, y1, x2, y2, x3, y3;
 			fin >> x0 >> y0 >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 			bezier (x0, y0, x1, y1, x2, y2, x3, y3, E);
+		} else if (cmd == "box") {
+			double x, y, z, width, height, depth;
+			fin >> x >> y >> z >> width >> height >> depth;
+			box (x, y, z, width, height, depth, E);
+		} else if (cmd == "sphere") {
+			double x, y, z, r;
+			fin >> x >> y >> z >> r;
+			sphere (x, y, z, r, E);
+		} else if (cmd == "torus") {
+			double x, y, z, r1, r2;
+			fin >> x >> y >> z >> r1 >> r2;
+			torus (x, y, z, r1, r2, E);
+		} else if (cmd == "clear") {
+			E.clear();
 		} else if (cmd == "apply") {
 			E *= M;
 		} else if (cmd == "display") {

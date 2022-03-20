@@ -41,5 +41,5 @@ public:
 	//void translate (double x, double y, double z = 0);
 
 	edgelist& operator*=(const matrix& m);
-
+	void clear ();
 };

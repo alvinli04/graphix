@@ -1,0 +1,16 @@
+sphere
+125 125 0 125
+sphere
+375 125 0 125
+box
+200 200 0 100 250 50
+sphere
+250 450 0 50
+torus
+250 325 0 10 75
+rotate
+x 20
+rotate
+y 20
+apply
+display

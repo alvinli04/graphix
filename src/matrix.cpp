@@ -186,6 +186,13 @@ edgelist& edgelist::operator*=(const matrix& m) {
 	return *this;
 }
 
+// Clears the edgelist
+void edgelist::clear () {
+	V = std::vector<std::vector<double>> (4);
+	this->rows = 4;
+	this->cols = 0;
+}
+
 /* Deprecated translation function
 void edgelist::translate (double x, double y, double z) {
 	for (double& a : V[0]) {

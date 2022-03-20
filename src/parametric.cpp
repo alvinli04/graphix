@@ -1,5 +1,6 @@
 #include <cmath>
 #include <iostream>
+#include <vector>
 
 #include "matrix.hpp"
 #include "parametric.hpp"
@@ -113,3 +114,57 @@ void bezier (double x0, double y0, double x1, double y1, double x2, double y2, d
 		ry = curry;
 	}
 }
+
+// draws a box
+void box (double x, double y, double z, double width, double height, double depth, edgelist& E) {
+	E.add_edge (x, y, z, x, y, z + depth);
+	E.add_edge (x, y, z + depth, x + width, y, z + depth);
+	E.add_edge (x + width, y, z + depth, x + width, y, z);
+	E.add_edge (x + width, y, z, x, y, z);
+	
+	E.add_edge (x, y, z, x, y + height, z);
+	E.add_edge (x, y, z + depth, x, y + height, z + depth);
+	E.add_edge (x + width, y, z + depth, x + width, y + height, z + depth);
+	E.add_edge (x + width, y, z, x + width, y + height, z);
+
+	E.add_edge (x, y + height, z, x, y + height, z + depth);
+	E.add_edge (x, y + height, z + depth, x + width, y + height, z + depth);
+	E.add_edge (x + width, y + height, z + depth, x + width, y + height, z);
+	E.add_edge (x + width, y + height, z, x, y + height, z);
+}
+
+// draws a sphere
+void sphere (double x, double y, double z, double r, edgelist& E) {
+	std::vector<std::vector<double>> points;
+	for (double phi = 0; phi <= 1; phi += 0.02) {
+		for (double theta = 0; theta <= 0.5; theta += 0.02) {
+			double sx = r * std::cos (2 * PI * theta) + x;
+			double sy = r * std::sin (2 * PI * theta) * std::cos (2 * PI * phi) + y;
+			double sz = r * std::sin (2 * PI * theta) * std::sin (2 * PI * phi) + z;
+			points.push_back ( {sx, sy, sz} );
+		}
+	}
+	for (std::vector<double>& p : points) {
+		E.add_edge (p[0], p[1], p[2], p[0], p[1], p[2]);
+	}
+}
+
+// draws a torus
+void torus (double x, double y, double z, double r1, double r2, edgelist& E) {
+	std::vector<std::vector<double>> points;
+	for (double phi = 0; phi <= 1; phi += 0.02) {
+		for (double theta = 0; theta <= 1; theta += 0.02) {
+			double sx = (r1 * std::cos (2 * PI * theta) + r2) * std::cos (2 * PI * phi) + x;
+			double sy = r1 * std::sin (2 * PI * theta) + y;
+			double sz = -(r1 * std::cos (2 * PI * theta) + r2) * std::sin (2 * PI * phi) + z;
+			points.push_back ( {sx, sy, sz} );
+		}
+	}
+	for (std::vector<double>& p : points) {
+		E.add_edge (p[0], p[1], p[2], p[0], p[1], p[2]);
+	}
+}
+
+
+
+
