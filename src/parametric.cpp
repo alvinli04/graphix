@@ -6,6 +6,7 @@
 #include "parametric.hpp"
 
 const int density = 20;
+const int curve_density = 500;
 
 // draws a circle centered at (cx, cy, cz)
 void circle (double cx, double cy, double cz, double r, edgelist& E){
@@ -16,9 +17,9 @@ void circle (double cx, double cy, double cz, double r, edgelist& E){
 		return cy + r * std::sin (2 * t * PI);
 	};
 	double rx = -1, ry;
-	for (double t = 0; t <= 1; t += dt) {
-		double currx = x(t);
-		double curry = y(t);
+	for (int t = 0; t <= curve_density; ++t) {
+		double currx = x((double) t / curve_density);
+		double curry = y((double) t / curve_density);
 		if (rx != -1) E.add_edge (rx, ry, cz, currx, curry, cz);
 		rx = currx;
 		ry = curry;
@@ -62,9 +63,9 @@ void hermite (double x0, double y0, double x1, double y1, double rx0, double ry0
 		return a * t * t * t + b * t * t + c * t + d;
 	};
 	double rx = -1, ry;
-	for (double t = 0; t <= 1; t += dt) {
-		double currx = x(t);
-		double curry = y(t);
+	for (int t = 0; t <= curve_density; ++t) {
+		double currx = x((double) t / curve_density);
+		double curry = y((double) t / curve_density);
 		if (rx != -1) E.add_edge (rx, ry, 0, currx, curry, 0);
 		rx = currx;
 		ry = curry;
@@ -108,9 +109,9 @@ void bezier (double x0, double y0, double x1, double y1, double x2, double y2, d
 		return a * t * t * t + b * t * t + c * t + d;
 	};
 	double rx = -1, ry;
-	for (double t = 0; t <= 1; t += dt) {
-		double currx = x(t);
-		double curry = y(t);
+	for (int t = 0; t <= curve_density; ++t) {
+		double currx = x((double) t / curve_density);
+		double curry = y((double) t / curve_density);
 		if (rx != -1) E.add_edge (rx, ry, 0, currx, curry, 0);
 		rx = currx;
 		ry = curry;
@@ -124,15 +125,15 @@ void box (double x, double y, double z, double width, double height, double dept
 	E.add_edge (x + width, y, z + depth, x + width, y, z);
 	E.add_edge (x + width, y, z, x, y, z);
 
-	E.add_edge (x, y, z, x, y + height, z);
-	E.add_edge (x, y, z + depth, x, y + height, z + depth);
-	E.add_edge (x + width, y, z + depth, x + width, y + height, z + depth);
-	E.add_edge (x + width, y, z, x + width, y + height, z);
+	E.add_edge (x, y, z, x, y - height, z);
+	E.add_edge (x, y, z + depth, x, y - height, z + depth);
+	E.add_edge (x + width, y, z + depth, x + width, y - height, z + depth);
+	E.add_edge (x + width, y, z, x + width, y - height, z);
 
-	E.add_edge (x, y + height, z, x, y + height, z + depth);
-	E.add_edge (x, y + height, z + depth, x + width, y + height, z + depth);
-	E.add_edge (x + width, y + height, z + depth, x + width, y + height, z);
-	E.add_edge (x + width, y + height, z, x, y + height, z);
+	E.add_edge (x, y - height, z, x, y - height, z + depth);
+	E.add_edge (x, y - height, z + depth, x + width, y - height, z + depth);
+	E.add_edge (x + width, y - height, z + depth, x + width, y - height, z);
+	E.add_edge (x + width, y - height, z, x, y - height, z);
 }
 
 // draws a sphere

@@ -1,7 +1,5 @@
 #include "matrix.hpp"
 
-const double dt = 0.001;
-
 const matrix H (
 	std::vector<std::vector<double>>
 	{
@@ -22,7 +20,7 @@ const matrix B  (
 	}
 );
 
-void circle (double cx, double cy, double cz, double r, edgelist& E); 
+void circle (double cx, double cy, double cz, double r, edgelist& E);
 void hermite (double x0, double y0, double x1, double y1, double rx0, double ry0, double rx1, double ry1, edgelist& E);
 void bezier (double x0, double y0, double x1, double y1, double x2, double y2, double x3, double y3, edgelist& E);
 void box (double x, double y, double z, double width, double height, double depth, edgelist& E);
