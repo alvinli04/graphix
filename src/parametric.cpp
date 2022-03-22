@@ -5,7 +5,7 @@
 #include "matrix.hpp"
 #include "parametric.hpp"
 
-const int density = 20;
+const int density = 50;
 const int curve_density = 500;
 
 // draws a circle centered at (cx, cy, cz)
