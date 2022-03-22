@@ -120,19 +120,19 @@ void bezier (double x0, double y0, double x1, double y1, double x2, double y2, d
 
 // draws a box
 void box (double x, double y, double z, double width, double height, double depth, edgelist& E) {
-	E.add_edge (x, y, z, x, y, z + depth);
-	E.add_edge (x, y, z + depth, x + width, y, z + depth);
-	E.add_edge (x + width, y, z + depth, x + width, y, z);
+	E.add_edge (x, y, z, x, y, z - depth);
+	E.add_edge (x, y, z - depth, x + width, y, z - depth);
+	E.add_edge (x + width, y, z - depth, x + width, y, z);
 	E.add_edge (x + width, y, z, x, y, z);
 
 	E.add_edge (x, y, z, x, y - height, z);
-	E.add_edge (x, y, z + depth, x, y - height, z + depth);
-	E.add_edge (x + width, y, z + depth, x + width, y - height, z + depth);
+	E.add_edge (x, y, z - depth, x, y - height, z - depth);
+	E.add_edge (x + width, y, z - depth, x + width, y - height, z - depth);
 	E.add_edge (x + width, y, z, x + width, y - height, z);
 
-	E.add_edge (x, y - height, z, x, y - height, z + depth);
-	E.add_edge (x, y - height, z + depth, x + width, y - height, z + depth);
-	E.add_edge (x + width, y - height, z + depth, x + width, y - height, z);
+	E.add_edge (x, y - height, z, x, y - height, z - depth);
+	E.add_edge (x, y - height, z - depth, x + width, y - height, z - depth);
+	E.add_edge (x + width, y - height, z - depth, x + width, y - height, z);
 	E.add_edge (x + width, y - height, z, x, y - height, z);
 }
 
