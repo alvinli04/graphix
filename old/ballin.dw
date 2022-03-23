@@ -1,0 +1,47 @@
+box
+75 450 -100 350 250 20
+torus
+250 250 0 10 100
+sphere
+250 500 200 80
+line
+150 270 -100 350 270 -100
+line
+150 270 -100 150 370 -100
+line
+350 270 -100 350 370 -100
+line
+350 370 -100 150 370 -100
+rotate
+x 90
+apply
+circle
+250 0 220 100
+circle
+250 0 190 80
+circle
+250 0 160 60
+line
+150 0 250 190 0 160
+line
+350 0 250 310 0 160
+line
+250 100 250 250 60 160
+line
+250 -100 250 250 -60 160
+ident
+rotate
+x -90
+apply
+#transformations
+ident
+rotate
+y 70
+rotate
+x 40
+move
+140 -180 0
+apply
+display
+save
+ballin.png
