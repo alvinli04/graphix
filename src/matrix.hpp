@@ -43,3 +43,13 @@ public:
 	edgelist& operator*=(const matrix& m);
 	void clear ();
 };
+
+class trianglelist: public matrix {
+
+public:
+	void add_point (double x, double y, double z);
+	void add_triangle (double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2);
+
+	trianglelist& operator*=(const matrix& m);
+	void clear ();
+};

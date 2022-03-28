@@ -206,3 +206,36 @@ void edgelist::translate (double x, double y, double z) {
 	}
 }
 */
+
+// Adds one point
+void trianglelist::add_point (double x, double y, double z) {
+	++cols;
+	V[0].push_back (x);
+	V[1].push_back (y);
+	V[2].push_back (z);
+	V[3].push_back (1);
+}
+
+// Adds a triangle
+void trianglelist::add_triangle (double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2) {
+	add_point (x0, y0, z0);
+	add_point (x1, y1, z1);
+	add_point (x2, y2, z2);
+}
+
+// Multiplication
+trianglelist& trianglelist::operator*=(const matrix& m) {
+	matrix res = m * (*this);
+	this->V = res.V;
+	this->rows = res.rows;
+	this->cols = res.cols;
+	return *this;
+}
+
+// Clears the trianglelist
+void trianglelist::clear () {
+	V = std::vector<std::vector<double>> (4);
+	this->rows = 4;
+	this->cols = 0;
+}
+

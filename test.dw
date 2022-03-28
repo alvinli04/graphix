@@ -1,3 +1,8 @@
-line
-0 0 0 250 250 0
+box
+100 300 0 100 100 100
+rotate
+y 30
+rotate
+x 30
+apply
 display

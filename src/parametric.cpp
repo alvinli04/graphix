@@ -119,21 +119,25 @@ void bezier (double x0, double y0, double x1, double y1, double x2, double y2, d
 }
 
 // draws a box
-void box (double x, double y, double z, double width, double height, double depth, edgelist& E) {
-	E.add_edge (x, y, z, x, y, z - depth);
-	E.add_edge (x, y, z - depth, x + width, y, z - depth);
-	E.add_edge (x + width, y, z - depth, x + width, y, z);
-	E.add_edge (x + width, y, z, x, y, z);
-
-	E.add_edge (x, y, z, x, y - height, z);
-	E.add_edge (x, y, z - depth, x, y - height, z - depth);
-	E.add_edge (x + width, y, z - depth, x + width, y - height, z - depth);
-	E.add_edge (x + width, y, z, x + width, y - height, z);
-
-	E.add_edge (x, y - height, z, x, y - height, z - depth);
-	E.add_edge (x, y - height, z - depth, x + width, y - height, z - depth);
-	E.add_edge (x + width, y - height, z - depth, x + width, y - height, z);
-	E.add_edge (x + width, y - height, z, x, y - height, z);
+void box (double x, double y, double z, double width, double height, double depth, trianglelist& T) {
+	// front face
+	T.add_triangle (x, y, z, x, y - height, z, x + width, y, z);
+	T.add_triangle (x, y - height, z, x + width, y - height, z, x + width, y, z);
+	// back face
+	T.add_triangle (x, y, z - depth, x, y - height, z - depth, x + width, y, z - depth);
+	T.add_triangle (x, y - height, z - depth, x + width, y - height, z - depth, x + width, y, z - depth);
+	// top face
+	T.add_triangle (x, y, z, x + width, y, z - depth, x, y, z - depth);
+   	T.add_triangle (x, y, z, x + width, y, z, x + width, y, z - depth);	
+	// bottom face
+	T.add_triangle (x, y - height, z, x + width, y - height, z - depth, x, y - height, z - depth);
+   	T.add_triangle (x, y - height, z, x + width, y - height, z, x + width, y - height, z - depth);	
+	// left face
+	T.add_triangle (x, y, z, x, y - height, z - depth, x, y, z - depth);
+	T.add_triangle (x, y, z, x, y - height, z, x, y - height, z - depth);
+	// right face
+	T.add_triangle (x + width, y, z, x + width, y - height, z - depth, x + width, y, z - depth);
+	T.add_triangle (x + width, y, z, x + width, y - height, z, x + width, y - height, z - depth);
 }
 
 // draws a sphere
@@ -149,7 +153,7 @@ void sphere (double x, double y, double z, double r, edgelist& E) {
 		}
 	}
 
-	// add points to edge matrix
+	// add points to triangle matrix
 	for (std::vector<double>& p : points) {
 		E.add_edge (p[0], p[1], p[2], p[0], p[1], p[2]);
 	}
@@ -168,7 +172,7 @@ void torus (double x, double y, double z, double r1, double r2, edgelist& E) {
 		}
 	}
 
-	// add points to edge matrix
+	// add points to triangle matrix
 	for (std::vector<double>& p : points) {
 		E.add_edge (p[0], p[1], p[2], p[0], p[1], p[2]);
 	}

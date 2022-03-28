@@ -11,7 +11,7 @@
 #include "color_constants.hpp"
 #include "parametric.hpp"
 
-void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
+void parse_file (std::string filename, matrix& M, edgelist& E, trianglelist& T, picture& S) {
 	std::ifstream fin (filename);
 	std::cout << "Opened " << filename << "\n";
 
@@ -61,7 +61,7 @@ void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 		} else if (cmd == "box") {
 			double x, y, z, width, height, depth;
 			fin >> x >> y >> z >> width >> height >> depth;
-			box (x, y, z, width, height, depth, E);
+			box (x, y, z, width, height, depth, T);
 		} else if (cmd == "sphere") {
 			double x, y, z, r;
 			fin >> x >> y >> z >> r;
@@ -72,11 +72,14 @@ void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 			torus (x, y, z, r1, r2, E);
 		} else if (cmd == "clear") {
 			E.clear();
+			T.clear();
 		} else if (cmd == "apply") {
 			E *= M;
+			T *= M;
 		} else if (cmd == "display") {
 			S.clear ();
 			draw_lines (E, S, WHITE);
+			draw_lines (T, S, WHITE);
 			S.to_ppm ("/tmp/test");
 			std::system ("display /tmp/test.ppm");
 		} else if (cmd == "save") {
@@ -84,6 +87,7 @@ void parse_file (std::string filename, matrix& M, edgelist& E, picture& S) {
 			fin >> fname;
 			S.clear ();
 			draw_lines (E, S, WHITE);
+			draw_lines (T, S, WHITE);
 			fname = "img/" + fname;
 			S.to_ppm (fname);
 			std::string fsave = "convert " + fname + ".ppm " + fname;
