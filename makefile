@@ -13,13 +13,13 @@ BIN_FILES := $(BIN)/graphix
 all: $(OBJ_FILES)
 	mkdir -p $(BIN)
 	mkdir -p $(IMG)
-	g++ -std=c++14 -o $(BIN_FILES) $^
+	g++ -std=c++17 -o $(BIN_FILES) $^
 	$(BIN_FILES) test.dw
 
 # Making Object Files
 $(OBJ)/%.o: $(SRC)/%.cpp
 	mkdir -p $(OBJ)
-	g++ -std=c++14 -o $@ -c $<
+	g++ -std=c++17 -o $@ -c $<
 
 # Cleaning Files
 clean:

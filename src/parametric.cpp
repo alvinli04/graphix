@@ -1,11 +1,12 @@
 #include <cmath>
 #include <iostream>
 #include <vector>
+#include <tuple>
 
 #include "matrix.hpp"
 #include "parametric.hpp"
 
-const int density = 10;
+const int density = 21;
 const int curve_density = 500;
 
 // draws a circle centered at (cx, cy, cz)
@@ -120,24 +121,28 @@ void bezier (double x0, double y0, double x1, double y1, double x2, double y2, d
 
 // draws a box
 void box (double x, double y, double z, double width, double height, double depth, trianglelist& T) {
-	// front face
-	T.add_triangle (x, y, z, x, y - height, z, x + width, y, z);
-	T.add_triangle (x, y - height, z, x + width, y - height, z, x + width, y, z);
-	// back face
-	T.add_triangle (x, y, z - depth, x, y - height, z - depth, x + width, y, z - depth);
-	T.add_triangle (x, y - height, z - depth, x + width, y - height, z - depth, x + width, y, z - depth);
-	// top face
-	T.add_triangle (x, y, z, x + width, y, z - depth, x, y, z - depth);
-   	T.add_triangle (x, y, z, x + width, y, z, x + width, y, z - depth);
-	// bottom face
-	T.add_triangle (x, y - height, z, x + width, y - height, z - depth, x, y - height, z - depth);
-   	T.add_triangle (x, y - height, z, x + width, y - height, z, x + width, y - height, z - depth);
-	// left face
-	T.add_triangle (x, y, z, x, y - height, z - depth, x, y, z - depth);
-	T.add_triangle (x, y, z, x, y - height, z, x, y - height, z - depth);
-	// right face
-	T.add_triangle (x + width, y, z, x + width, y - height, z - depth, x + width, y, z - depth);
-	T.add_triangle (x + width, y, z, x + width, y - height, z, x + width, y - height, z - depth);
+	const auto [x0, y0, z0] = std::make_tuple (x, y, z);
+    const auto [x1, y1, z1] = std::make_tuple (x + width, y, z);
+    const auto [x2, y2, z2] = std::make_tuple (x, y - height, z);
+    const auto [x3, y3, z3] = std::make_tuple (x, y, z - depth);
+    const auto [x4, y4, z4] = std::make_tuple (x + width, y - height, z);
+    const auto [x5, y5, z5] = std::make_tuple (x + width, y, z - depth);
+    const auto [x6, y6, z6] = std::make_tuple (x, y - height, z - depth);
+    const auto [x7, y7, z7] = std::make_tuple (x + width, y - height, z - depth);
+
+    // Adding triangles to matrix
+    T.add_triangle (x0, y0, z0, x2, y2, z2, x4, y4, z4);
+    T.add_triangle (x0, y0, z0, x4, y4, z4, x1, y1, z1);
+    T.add_triangle (x3, y3, z3, x6, y6, z6, x2, y2, z2);
+    T.add_triangle (x3, y3, z3, x2, y2, z2, x0, y0, z0);
+    T.add_triangle (x5, y5, z5, x7, y7, z7, x6, y6, z6);
+    T.add_triangle (x5, y5, z5, x6, y6, z6, x3, y3, z3);
+    T.add_triangle (x1, y1, z1, x4, y4, z4, x7, y7, z7);
+    T.add_triangle (x1, y1, z1, x7, y7, z7, x5, y5, z5);
+    T.add_triangle (x3, y3, z3, x0, y0, z0, x1, y1, z1);
+    T.add_triangle (x3, y3, z3, x1, y1, z1, x5, y5, z5);
+    T.add_triangle (x2, y2, z2, x6, y6, z6, x7, y7, z7);
+    T.add_triangle (x2, y2, z2, x7, y7, z7, x4, y4, z4);
 }
 
 // draws a sphere
