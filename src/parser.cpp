@@ -49,7 +49,7 @@ void parse_file (std::string filename, matrix& M, edgelist& E, trianglelist& T, 
 		} else if (cmd == "circle") {
 			double cx, cy, cz, r;
 			fin >> cx >> cy >> cz >> r;
-			circle (cx, cy, cz, r, E);	
+			circle (cx, cy, cz, r, E);
 		} else if (cmd == "hermite") {
 			double x0, y0, x1, y1, rx0, ry0, rx1, ry1;
 			fin >> x0 >> y0 >> x1 >> y1 >> rx0 >> ry0 >> rx1 >> ry1;
@@ -65,11 +65,11 @@ void parse_file (std::string filename, matrix& M, edgelist& E, trianglelist& T, 
 		} else if (cmd == "sphere") {
 			double x, y, z, r;
 			fin >> x >> y >> z >> r;
-			sphere (x, y, z, r, E);
+			sphere (x, y, z, r, T);
 		} else if (cmd == "torus") {
 			double x, y, z, r1, r2;
 			fin >> x >> y >> z >> r1 >> r2;
-			torus (x, y, z, r1, r2, E);
+			torus (x, y, z, r1, r2, T);
 		} else if (cmd == "clear") {
 			E.clear();
 			T.clear();
