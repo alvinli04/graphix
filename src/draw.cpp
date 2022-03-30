@@ -95,8 +95,17 @@ void draw_lines (edgelist& points, picture& p, const color& c) {
 // Draws lines from a triangle list
 void draw_lines (trianglelist& points, picture& p, const color& c) {
 	for (int i = 0; i < points.cols; i += 3) {
-		draw_line (points[0][i], points[1][i], points[0][i+1], points[1][i+1], p, c);
-		draw_line (points[0][i+1], points[1][i+1], points[0][i+2], points[1][i+2], p, c);
-		draw_line (points[0][i+2], points[1][i+2], points[0][i], points[1][i], p, c);
+		double x1 = points[0][i]  , y1 = points[1][i],
+			   x2 = points[0][i+1], y2 = points[1][i+1],
+			   x3 = points[0][i+2], y3 = points[1][i+2];
+
+		double dx1 = x2 - x1, dx2 = x3 - x1,
+			   dy1 = y2 - y1, dy2 = y3 - y1;
+
+		if (dx1 * dy2 >= dx2 * dy1) {
+			draw_line (x1, y1, x2, y2, p, c);
+			draw_line (x2, y2, x3, y3, p, c);
+			draw_line (x3, y3, x1, y1, p, c);
+		}
 	}
 }
