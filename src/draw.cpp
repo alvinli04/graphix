@@ -102,7 +102,7 @@ void draw_lines (trianglelist& points, picture& p, const color& c) {
 		double dx1 = x2 - x1, dx2 = x3 - x1,
 			   dy1 = y2 - y1, dy2 = y3 - y1;
 
-		if (dx1 * dy2 >= dx2 * dy1) {
+		if (dx1 * dy2 > dx2 * dy1) {
 			draw_line (x1, y1, x2, y2, p, c);
 			draw_line (x2, y2, x3, y3, p, c);
 			draw_line (x3, y3, x1, y1, p, c);

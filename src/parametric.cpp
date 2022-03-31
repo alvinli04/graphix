@@ -6,7 +6,7 @@
 #include "matrix.hpp"
 #include "parametric.hpp"
 
-const int density = 25;
+const int density = 40;
 const int curve_density = 500;
 
 // draws a circle centered at (cx, cy, cz)
@@ -161,7 +161,7 @@ void sphere (double x, double y, double z, double r, trianglelist& T) {
 	int sz = points.size();
 	// add points to triangle matrix
 	for (int i = 0; i < density - 1; i++) { //each semicircle
-		for (int j = 1; j < density - 1; j++) { // each point on the semicircle
+		for (int j = 0; j < density - 1; j++) { // each point on the semicircle
 			T.add_triangle (
 				// n, n + 1, n + k + 1
 				points[i * density + j][0], points[i * density + j][1], points[i * density + j][2],
