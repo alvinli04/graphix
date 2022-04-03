@@ -1,0 +1,2150 @@
+clear
+sphere
+-100 0 0 30
+sphere
+100 0 0 30
+ident
+rotate
+y 0.0
+rotate
+x 0.0
+move
+250 250 -250
+apply
+save
+frame000.png
+clear
+sphere
+-99 0 0 30
+sphere
+99 0 0 30
+ident
+rotate
+y 10.25
+rotate
+x 0.3
+move
+250 250 -250
+apply
+save
+frame001.png
+clear
+sphere
+-98 0 0 30
+sphere
+98 0 0 30
+ident
+rotate
+y 21.0
+rotate
+x 0.6
+move
+250 250 -250
+apply
+save
+frame002.png
+clear
+sphere
+-97 0 0 30
+sphere
+97 0 0 30
+ident
+rotate
+y 32.25
+rotate
+x 0.8999999999999999
+move
+250 250 -250
+apply
+save
+frame003.png
+clear
+sphere
+-96 0 0 30
+sphere
+96 0 0 30
+ident
+rotate
+y 44.0
+rotate
+x 1.2
+move
+250 250 -250
+apply
+save
+frame004.png
+clear
+sphere
+-95 0 0 30
+sphere
+95 0 0 30
+ident
+rotate
+y 56.25
+rotate
+x 1.5
+move
+250 250 -250
+apply
+save
+frame005.png
+clear
+sphere
+-94 0 0 30
+sphere
+94 0 0 30
+ident
+rotate
+y 69.0
+rotate
+x 1.7999999999999998
+move
+250 250 -250
+apply
+save
+frame006.png
+clear
+sphere
+-93 0 0 30
+sphere
+93 0 0 30
+ident
+rotate
+y 82.25
+rotate
+x 2.1
+move
+250 250 -250
+apply
+save
+frame007.png
+clear
+sphere
+-92 0 0 30
+sphere
+92 0 0 30
+ident
+rotate
+y 96.0
+rotate
+x 2.4
+move
+250 250 -250
+apply
+save
+frame008.png
+clear
+sphere
+-91 0 0 30
+sphere
+91 0 0 30
+ident
+rotate
+y 110.25
+rotate
+x 2.6999999999999997
+move
+250 250 -250
+apply
+save
+frame009.png
+clear
+sphere
+-90 0 0 30
+sphere
+90 0 0 30
+ident
+rotate
+y 125.0
+rotate
+x 3.0
+move
+250 250 -250
+apply
+save
+frame010.png
+clear
+sphere
+-89 0 0 30
+sphere
+89 0 0 30
+ident
+rotate
+y 140.25
+rotate
+x 3.3
+move
+250 250 -250
+apply
+save
+frame011.png
+clear
+sphere
+-88 0 0 30
+sphere
+88 0 0 30
+ident
+rotate
+y 156.0
+rotate
+x 3.5999999999999996
+move
+250 250 -250
+apply
+save
+frame012.png
+clear
+sphere
+-87 0 0 30
+sphere
+87 0 0 30
+ident
+rotate
+y 172.25
+rotate
+x 3.9
+move
+250 250 -250
+apply
+save
+frame013.png
+clear
+sphere
+-86 0 0 30
+sphere
+86 0 0 30
+ident
+rotate
+y 189.0
+rotate
+x 4.2
+move
+250 250 -250
+apply
+save
+frame014.png
+clear
+sphere
+-85 0 0 30
+sphere
+85 0 0 30
+ident
+rotate
+y 206.25
+rotate
+x 4.5
+move
+250 250 -250
+apply
+save
+frame015.png
+clear
+sphere
+-84 0 0 30
+sphere
+84 0 0 30
+ident
+rotate
+y 224.0
+rotate
+x 4.8
+move
+250 250 -250
+apply
+save
+frame016.png
+clear
+sphere
+-83 0 0 30
+sphere
+83 0 0 30
+ident
+rotate
+y 242.25
+rotate
+x 5.1
+move
+250 250 -250
+apply
+save
+frame017.png
+clear
+sphere
+-82 0 0 30
+sphere
+82 0 0 30
+ident
+rotate
+y 261.0
+rotate
+x 5.3999999999999995
+move
+250 250 -250
+apply
+save
+frame018.png
+clear
+sphere
+-81 0 0 30
+sphere
+81 0 0 30
+ident
+rotate
+y 280.25
+rotate
+x 5.7
+move
+250 250 -250
+apply
+save
+frame019.png
+clear
+sphere
+-80 0 0 30
+sphere
+80 0 0 30
+ident
+rotate
+y 300.0
+rotate
+x 6.0
+move
+250 250 -250
+apply
+save
+frame020.png
+clear
+sphere
+-79 0 0 30
+sphere
+79 0 0 30
+ident
+rotate
+y 320.25
+rotate
+x 6.3
+move
+250 250 -250
+apply
+save
+frame021.png
+clear
+sphere
+-78 0 0 30
+sphere
+78 0 0 30
+ident
+rotate
+y 341.0
+rotate
+x 6.6
+move
+250 250 -250
+apply
+save
+frame022.png
+clear
+sphere
+-77 0 0 30
+sphere
+77 0 0 30
+ident
+rotate
+y 362.25
+rotate
+x 6.8999999999999995
+move
+250 250 -250
+apply
+save
+frame023.png
+clear
+sphere
+-76 0 0 30
+sphere
+76 0 0 30
+ident
+rotate
+y 384.0
+rotate
+x 7.199999999999999
+move
+250 250 -250
+apply
+save
+frame024.png
+clear
+sphere
+-75 0 0 30
+sphere
+75 0 0 30
+ident
+rotate
+y 406.25
+rotate
+x 7.5
+move
+250 250 -250
+apply
+save
+frame025.png
+clear
+sphere
+-74 0 0 30
+sphere
+74 0 0 30
+ident
+rotate
+y 429.0
+rotate
+x 7.8
+move
+250 250 -250
+apply
+save
+frame026.png
+clear
+sphere
+-73 0 0 30
+sphere
+73 0 0 30
+ident
+rotate
+y 452.25
+rotate
+x 8.1
+move
+250 250 -250
+apply
+save
+frame027.png
+clear
+sphere
+-72 0 0 30
+sphere
+72 0 0 30
+ident
+rotate
+y 476.0
+rotate
+x 8.4
+move
+250 250 -250
+apply
+save
+frame028.png
+clear
+sphere
+-71 0 0 30
+sphere
+71 0 0 30
+ident
+rotate
+y 500.25
+rotate
+x 8.7
+move
+250 250 -250
+apply
+save
+frame029.png
+clear
+sphere
+-70 0 0 30
+sphere
+70 0 0 30
+ident
+rotate
+y 525.0
+rotate
+x 9.0
+move
+250 250 -250
+apply
+save
+frame030.png
+clear
+sphere
+-69 0 0 30
+sphere
+69 0 0 30
+ident
+rotate
+y 550.25
+rotate
+x 9.299999999999999
+move
+250 250 -250
+apply
+save
+frame031.png
+clear
+sphere
+-68 0 0 30
+sphere
+68 0 0 30
+ident
+rotate
+y 576.0
+rotate
+x 9.6
+move
+250 250 -250
+apply
+save
+frame032.png
+clear
+sphere
+-67 0 0 30
+sphere
+67 0 0 30
+ident
+rotate
+y 602.25
+rotate
+x 9.9
+move
+250 250 -250
+apply
+save
+frame033.png
+clear
+sphere
+-66 0 0 30
+sphere
+66 0 0 30
+ident
+rotate
+y 629.0
+rotate
+x 10.2
+move
+250 250 -250
+apply
+save
+frame034.png
+clear
+sphere
+-65 0 0 30
+sphere
+65 0 0 30
+ident
+rotate
+y 656.25
+rotate
+x 10.5
+move
+250 250 -250
+apply
+save
+frame035.png
+clear
+sphere
+-64 0 0 30
+sphere
+64 0 0 30
+ident
+rotate
+y 684.0
+rotate
+x 10.799999999999999
+move
+250 250 -250
+apply
+save
+frame036.png
+clear
+sphere
+-63 0 0 30
+sphere
+63 0 0 30
+ident
+rotate
+y 712.25
+rotate
+x 11.1
+move
+250 250 -250
+apply
+save
+frame037.png
+clear
+sphere
+-62 0 0 30
+sphere
+62 0 0 30
+ident
+rotate
+y 741.0
+rotate
+x 11.4
+move
+250 250 -250
+apply
+save
+frame038.png
+clear
+sphere
+-61 0 0 30
+sphere
+61 0 0 30
+ident
+rotate
+y 770.25
+rotate
+x 11.7
+move
+250 250 -250
+apply
+save
+frame039.png
+clear
+sphere
+-60 0 0 30
+sphere
+60 0 0 30
+ident
+rotate
+y 800.0
+rotate
+x 12.0
+move
+250 250 -250
+apply
+save
+frame040.png
+clear
+sphere
+-59 0 0 30
+sphere
+59 0 0 30
+ident
+rotate
+y 830.25
+rotate
+x 12.299999999999999
+move
+250 250 -250
+apply
+save
+frame041.png
+clear
+sphere
+-58 0 0 30
+sphere
+58 0 0 30
+ident
+rotate
+y 861.0
+rotate
+x 12.6
+move
+250 250 -250
+apply
+save
+frame042.png
+clear
+sphere
+-57 0 0 30
+sphere
+57 0 0 30
+ident
+rotate
+y 892.25
+rotate
+x 12.9
+move
+250 250 -250
+apply
+save
+frame043.png
+clear
+sphere
+-56 0 0 30
+sphere
+56 0 0 30
+ident
+rotate
+y 924.0
+rotate
+x 13.2
+move
+250 250 -250
+apply
+save
+frame044.png
+clear
+sphere
+-55 0 0 30
+sphere
+55 0 0 30
+ident
+rotate
+y 956.25
+rotate
+x 13.5
+move
+250 250 -250
+apply
+save
+frame045.png
+clear
+sphere
+-54 0 0 30
+sphere
+54 0 0 30
+ident
+rotate
+y 989.0
+rotate
+x 13.799999999999999
+move
+250 250 -250
+apply
+save
+frame046.png
+clear
+sphere
+-53 0 0 30
+sphere
+53 0 0 30
+ident
+rotate
+y 1022.25
+rotate
+x 14.1
+move
+250 250 -250
+apply
+save
+frame047.png
+clear
+sphere
+-52 0 0 30
+sphere
+52 0 0 30
+ident
+rotate
+y 1056.0
+rotate
+x 14.399999999999999
+move
+250 250 -250
+apply
+save
+frame048.png
+clear
+sphere
+-51 0 0 30
+sphere
+51 0 0 30
+ident
+rotate
+y 1090.25
+rotate
+x 14.7
+move
+250 250 -250
+apply
+save
+frame049.png
+clear
+sphere
+-50 0 0 30
+sphere
+50 0 0 30
+ident
+rotate
+y 1125.0
+rotate
+x 15.0
+move
+250 250 -250
+apply
+save
+frame050.png
+clear
+sphere
+-49 0 0 30
+sphere
+49 0 0 30
+ident
+rotate
+y 1160.25
+rotate
+x 15.299999999999999
+move
+250 250 -250
+apply
+save
+frame051.png
+clear
+sphere
+-48 0 0 30
+sphere
+48 0 0 30
+ident
+rotate
+y 1196.0
+rotate
+x 15.6
+move
+250 250 -250
+apply
+save
+frame052.png
+clear
+sphere
+-47 0 0 30
+sphere
+47 0 0 30
+ident
+rotate
+y 1232.25
+rotate
+x 15.899999999999999
+move
+250 250 -250
+apply
+save
+frame053.png
+clear
+sphere
+-46 0 0 30
+sphere
+46 0 0 30
+ident
+rotate
+y 1269.0
+rotate
+x 16.2
+move
+250 250 -250
+apply
+save
+frame054.png
+clear
+sphere
+-45 0 0 30
+sphere
+45 0 0 30
+ident
+rotate
+y 1306.25
+rotate
+x 16.5
+move
+250 250 -250
+apply
+save
+frame055.png
+clear
+sphere
+-44 0 0 30
+sphere
+44 0 0 30
+ident
+rotate
+y 1344.0
+rotate
+x 16.8
+move
+250 250 -250
+apply
+save
+frame056.png
+clear
+sphere
+-43 0 0 30
+sphere
+43 0 0 30
+ident
+rotate
+y 1382.25
+rotate
+x 17.099999999999998
+move
+250 250 -250
+apply
+save
+frame057.png
+clear
+sphere
+-42 0 0 30
+sphere
+42 0 0 30
+ident
+rotate
+y 1421.0
+rotate
+x 17.4
+move
+250 250 -250
+apply
+save
+frame058.png
+clear
+sphere
+-41 0 0 30
+sphere
+41 0 0 30
+ident
+rotate
+y 1460.25
+rotate
+x 17.7
+move
+250 250 -250
+apply
+save
+frame059.png
+clear
+sphere
+-40 0 0 30
+sphere
+40 0 0 30
+ident
+rotate
+y 1500.0
+rotate
+x 18.0
+move
+250 250 -250
+apply
+save
+frame060.png
+clear
+sphere
+-39 0 0 30
+sphere
+39 0 0 30
+ident
+rotate
+y 1540.25
+rotate
+x 18.3
+move
+250 250 -250
+apply
+save
+frame061.png
+clear
+sphere
+-38 0 0 30
+sphere
+38 0 0 30
+ident
+rotate
+y 1581.0
+rotate
+x 18.599999999999998
+move
+250 250 -250
+apply
+save
+frame062.png
+clear
+sphere
+-37 0 0 30
+sphere
+37 0 0 30
+ident
+rotate
+y 1622.25
+rotate
+x 18.9
+move
+250 250 -250
+apply
+save
+frame063.png
+clear
+sphere
+-36 0 0 30
+sphere
+36 0 0 30
+ident
+rotate
+y 1664.0
+rotate
+x 19.2
+move
+250 250 -250
+apply
+save
+frame064.png
+clear
+sphere
+-35 0 0 30
+sphere
+35 0 0 30
+ident
+rotate
+y 1706.25
+rotate
+x 19.5
+move
+250 250 -250
+apply
+save
+frame065.png
+clear
+sphere
+-34 0 0 30
+sphere
+34 0 0 30
+ident
+rotate
+y 1749.0
+rotate
+x 19.8
+move
+250 250 -250
+apply
+save
+frame066.png
+clear
+sphere
+-33 0 0 30
+sphere
+33 0 0 30
+ident
+rotate
+y 1792.25
+rotate
+x 20.099999999999998
+move
+250 250 -250
+apply
+save
+frame067.png
+clear
+sphere
+-32 0 0 30
+sphere
+32 0 0 30
+ident
+rotate
+y 1836.0
+rotate
+x 20.4
+move
+250 250 -250
+apply
+save
+frame068.png
+clear
+sphere
+-31 0 0 30
+sphere
+31 0 0 30
+ident
+rotate
+y 1880.25
+rotate
+x 20.7
+move
+250 250 -250
+apply
+save
+frame069.png
+clear
+sphere
+-30 0 0 30
+sphere
+30 0 0 30
+ident
+rotate
+y 1925.0
+rotate
+x 21.0
+move
+250 250 -250
+apply
+save
+frame070.png
+clear
+sphere
+-29 0 0 30
+sphere
+29 0 0 30
+ident
+rotate
+y 1970.25
+rotate
+x 21.3
+move
+250 250 -250
+apply
+save
+frame071.png
+clear
+sphere
+-28 0 0 30
+sphere
+28 0 0 30
+ident
+rotate
+y 2016.0
+rotate
+x 21.599999999999998
+move
+250 250 -250
+apply
+save
+frame072.png
+clear
+sphere
+-27 0 0 30
+sphere
+27 0 0 30
+ident
+rotate
+y 2062.25
+rotate
+x 21.9
+move
+250 250 -250
+apply
+save
+frame073.png
+clear
+sphere
+-26 0 0 30
+sphere
+26 0 0 30
+ident
+rotate
+y 2109.0
+rotate
+x 22.2
+move
+250 250 -250
+apply
+save
+frame074.png
+clear
+sphere
+-25 0 0 30
+sphere
+25 0 0 30
+ident
+rotate
+y 2156.25
+rotate
+x 22.5
+move
+250 250 -250
+apply
+save
+frame075.png
+clear
+sphere
+-24 0 0 30
+sphere
+24 0 0 30
+ident
+rotate
+y 2204.0
+rotate
+x 22.8
+move
+250 250 -250
+apply
+save
+frame076.png
+clear
+sphere
+-23 0 0 30
+sphere
+23 0 0 30
+ident
+rotate
+y 2252.25
+rotate
+x 23.099999999999998
+move
+250 250 -250
+apply
+save
+frame077.png
+clear
+sphere
+-22 0 0 30
+sphere
+22 0 0 30
+ident
+rotate
+y 2301.0
+rotate
+x 23.4
+move
+250 250 -250
+apply
+save
+frame078.png
+clear
+sphere
+-21 0 0 30
+sphere
+21 0 0 30
+ident
+rotate
+y 2350.25
+rotate
+x 23.7
+move
+250 250 -250
+apply
+save
+frame079.png
+clear
+sphere
+-20 0 0 30
+sphere
+20 0 0 30
+ident
+rotate
+y 2400.0
+rotate
+x 24.0
+move
+250 250 -250
+apply
+save
+frame080.png
+clear
+sphere
+-19 0 0 30
+sphere
+19 0 0 30
+ident
+rotate
+y 2450.25
+rotate
+x 24.3
+move
+250 250 -250
+apply
+save
+frame081.png
+clear
+sphere
+-18 0 0 30
+sphere
+18 0 0 30
+ident
+rotate
+y 2501.0
+rotate
+x 24.599999999999998
+move
+250 250 -250
+apply
+save
+frame082.png
+clear
+sphere
+-17 0 0 30
+sphere
+17 0 0 30
+ident
+rotate
+y 2552.25
+rotate
+x 24.9
+move
+250 250 -250
+apply
+save
+frame083.png
+clear
+sphere
+-16 0 0 30
+sphere
+16 0 0 30
+ident
+rotate
+y 2604.0
+rotate
+x 25.2
+move
+250 250 -250
+apply
+save
+frame084.png
+clear
+sphere
+-15 0 0 30
+sphere
+15 0 0 30
+ident
+rotate
+y 2656.25
+rotate
+x 25.5
+move
+250 250 -250
+apply
+save
+frame085.png
+clear
+sphere
+-14 0 0 30
+sphere
+14 0 0 30
+ident
+rotate
+y 2709.0
+rotate
+x 25.8
+move
+250 250 -250
+apply
+save
+frame086.png
+clear
+sphere
+-13 0 0 30
+sphere
+13 0 0 30
+ident
+rotate
+y 2762.25
+rotate
+x 26.099999999999998
+move
+250 250 -250
+apply
+save
+frame087.png
+clear
+sphere
+-12 0 0 30
+sphere
+12 0 0 30
+ident
+rotate
+y 2816.0
+rotate
+x 26.4
+move
+250 250 -250
+apply
+save
+frame088.png
+clear
+sphere
+-11 0 0 30
+sphere
+11 0 0 30
+ident
+rotate
+y 2870.25
+rotate
+x 26.7
+move
+250 250 -250
+apply
+save
+frame089.png
+clear
+sphere
+-10 0 0 30
+sphere
+10 0 0 30
+ident
+rotate
+y 2925.0
+rotate
+x 27.0
+move
+250 250 -250
+apply
+save
+frame090.png
+clear
+sphere
+-9 0 0 30
+sphere
+9 0 0 30
+ident
+rotate
+y 2980.25
+rotate
+x 27.3
+move
+250 250 -250
+apply
+save
+frame091.png
+clear
+sphere
+-8 0 0 30
+sphere
+8 0 0 30
+ident
+rotate
+y 3036.0
+rotate
+x 27.599999999999998
+move
+250 250 -250
+apply
+save
+frame092.png
+clear
+sphere
+-7 0 0 30
+sphere
+7 0 0 30
+ident
+rotate
+y 3092.25
+rotate
+x 27.9
+move
+250 250 -250
+apply
+save
+frame093.png
+clear
+sphere
+-6 0 0 30
+sphere
+6 0 0 30
+ident
+rotate
+y 3149.0
+rotate
+x 28.2
+move
+250 250 -250
+apply
+save
+frame094.png
+clear
+sphere
+-5 0 0 30
+sphere
+5 0 0 30
+ident
+rotate
+y 3206.25
+rotate
+x 28.5
+move
+250 250 -250
+apply
+save
+frame095.png
+clear
+sphere
+-4 0 0 30
+sphere
+4 0 0 30
+ident
+rotate
+y 3264.0
+rotate
+x 28.799999999999997
+move
+250 250 -250
+apply
+save
+frame096.png
+clear
+sphere
+-3 0 0 30
+sphere
+3 0 0 30
+ident
+rotate
+y 3322.25
+rotate
+x 29.099999999999998
+move
+250 250 -250
+apply
+save
+frame097.png
+clear
+sphere
+-2 0 0 30
+sphere
+2 0 0 30
+ident
+rotate
+y 3381.0
+rotate
+x 29.4
+move
+250 250 -250
+apply
+save
+frame098.png
+clear
+sphere
+-1 0 0 30
+sphere
+1 0 0 30
+ident
+rotate
+y 3440.25
+rotate
+x 29.7
+move
+250 250 -250
+apply
+save
+frame099.png
+clear
+torus
+0 0 0 50 50
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame100.png
+clear
+torus
+0 0 0 50 100
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame101.png
+clear
+torus
+0 0 0 50 150
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame102.png
+clear
+torus
+0 0 0 50 200
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame103.png
+clear
+torus
+0 0 0 50 250
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame104.png
+clear
+torus
+0 0 0 50 300
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame105.png
+clear
+torus
+0 0 0 50 350
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame106.png
+clear
+torus
+0 0 0 50 400
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame107.png
+clear
+torus
+0 0 0 50 450
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame108.png
+clear
+torus
+0 0 0 50 500
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame109.png
+clear
+torus
+0 0 0 50 550
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame110.png
+clear
+torus
+0 0 0 50 600
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame111.png
+clear
+torus
+0 0 0 50 650
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame112.png
+clear
+torus
+0 0 0 50 700
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame113.png
+clear
+torus
+0 0 0 50 750
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame114.png
+clear
+torus
+0 0 0 50 800
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame115.png
+clear
+torus
+0 0 0 50 850
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame116.png
+clear
+torus
+0 0 0 50 900
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame117.png
+clear
+torus
+0 0 0 50 950
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame118.png
+clear
+torus
+0 0 0 50 1000
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame119.png
+clear
+torus
+0 0 0 50 1050
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame120.png
+clear
+torus
+0 0 0 50 1100
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame121.png
+clear
+torus
+0 0 0 50 1150
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame122.png
+clear
+torus
+0 0 0 50 1200
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame123.png
+clear
+torus
+0 0 0 50 1250
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame124.png
+clear
+torus
+0 0 0 50 1300
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame125.png
+clear
+torus
+0 0 0 50 1350
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame126.png
+clear
+torus
+0 0 0 50 1400
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame127.png
+clear
+torus
+0 0 0 50 1450
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame128.png
+clear
+torus
+0 0 0 50 1500
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame129.png
+clear
+torus
+0 0 0 50 1550
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame130.png
+clear
+torus
+0 0 0 50 1600
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame131.png
+clear
+torus
+0 0 0 50 1650
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame132.png
+clear
+torus
+0 0 0 50 1700
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame133.png
+clear
+torus
+0 0 0 50 1750
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame134.png
+clear
+torus
+0 0 0 50 1800
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame135.png
+clear
+torus
+0 0 0 50 1850
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame136.png
+clear
+torus
+0 0 0 50 1900
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame137.png
+clear
+torus
+0 0 0 50 1950
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame138.png
+clear
+torus
+0 0 0 50 2000
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame139.png
+clear
+torus
+0 0 0 50 2050
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame140.png
+clear
+torus
+0 0 0 50 2100
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame141.png
+clear
+torus
+0 0 0 50 2150
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame142.png
+clear
+torus
+0 0 0 50 2200
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame143.png
+clear
+torus
+0 0 0 50 2250
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame144.png
+clear
+torus
+0 0 0 50 2300
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame145.png
+clear
+torus
+0 0 0 50 2350
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame146.png
+clear
+torus
+0 0 0 50 2400
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame147.png
+clear
+torus
+0 0 0 50 2450
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame148.png
+clear
+torus
+0 0 0 50 2500
+ident
+rotate
+x 30
+rotate
+y 30
+move
+250 250 -250
+apply
+save
+frame149.png
