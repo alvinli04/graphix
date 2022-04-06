@@ -77,6 +77,14 @@ matrix operator*(matrix a, const matrix& b) {
 	return a *= b;
 }
 
+// Set a matrix equal to another matrix
+matrix& matrix::operator=(const matrix& m) {
+	this->V = m.V;
+	this->rows = m.rows;
+	this->cols = m.cols;
+	return *this;
+}
+
 // Turns a matrix into the identity matrix
 void ident (matrix& m) {
 	assert (m.rows == m.cols);

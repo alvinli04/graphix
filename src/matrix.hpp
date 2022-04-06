@@ -21,6 +21,7 @@ public:
 	std::vector<double>& operator[](int index);
 	friend std::ostream& operator<<(std::ostream& os, matrix const& m);
 	matrix& operator*=(const matrix& m);
+	matrix& operator=(const matrix& m);
 	friend matrix operator*(matrix a, const matrix& b);
 
 };
