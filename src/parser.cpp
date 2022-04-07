@@ -29,8 +29,6 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			E *= cstack.top();
 			draw_lines (E, S, WHITE);
 			E.clear();
-			matrix M = cstack.top();
-			cstack.push (M);
 		} else if (cmd == "ident") {
 			ident (cstack.top());
 		} else if (cmd == "scale") {
@@ -59,8 +57,6 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			E *= cstack.top();
 			draw_lines (E, S, WHITE);
 			E.clear();
-			matrix M = cstack.top();
-			cstack.push (M);
 		} else if (cmd == "hermite") {
 			double x0, y0, x1, y1, rx0, ry0, rx1, ry1;
 			fin >> x0 >> y0 >> x1 >> y1 >> rx0 >> ry0 >> rx1 >> ry1;
@@ -68,8 +64,6 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			E *= cstack.top();
 			draw_lines (E, S, WHITE);
 			E.clear();
-			matrix M = cstack.top();
-			cstack.push (M);
 		} else if (cmd == "bezier") {
 			double x0, y0, x1, y1, x2, y2, x3, y3;
 			fin >> x0 >> y0 >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
@@ -77,8 +71,6 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			E *= cstack.top();
 			draw_lines (E, S, WHITE);
 			E.clear();
-			matrix M = cstack.top();
-			cstack.push (M);
 		} else if (cmd == "box") {
 			double x, y, z, width, height, depth;
 			fin >> x >> y >> z >> width >> height >> depth;
@@ -86,8 +78,6 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			T *= cstack.top();
 			draw_lines (T, S, WHITE);
 			T.clear();
-			matrix M = cstack.top();
-			cstack.push (M);
 		} else if (cmd == "sphere") {
 			double x, y, z, r;
 			fin >> x >> y >> z >> r;
@@ -95,12 +85,13 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			T *= cstack.top();
 			draw_lines (T, S, WHITE);
 			T.clear();
-			matrix M = cstack.top();
-			cstack.push (M);
 		} else if (cmd == "torus") {
 			double x, y, z, r1, r2;
 			fin >> x >> y >> z >> r1 >> r2;
 			torus (x, y, z, r1, r2, T);
+			T *= cstack.top();
+			draw_lines (T, S, WHITE);
+			T.clear();
 		} else if (cmd == "clear") {
 			E.clear();
 			T.clear();
@@ -108,8 +99,7 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			E *= cstack.top();
 			T *= cstack.top();
 		} else if (cmd == "push") {
-			matrix m (4, 4);
-			ident (m);
+			matrix m = cstack.top();
 			cstack.push (m);
 		} else if (cmd == "pop") {
 			cstack.pop();
