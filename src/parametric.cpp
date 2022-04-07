@@ -121,14 +121,14 @@ void bezier (double x0, double y0, double x1, double y1, double x2, double y2, d
 
 // draws a box
 void box (double x, double y, double z, double width, double height, double depth, trianglelist& T) {
-	const auto [x0, y0, z0] = std::make_tuple (x, y, z);
-    const auto [x1, y1, z1] = std::make_tuple (x + width, y, z);
-    const auto [x2, y2, z2] = std::make_tuple (x, y - height, z);
-    const auto [x3, y3, z3] = std::make_tuple (x, y, z - depth);
-    const auto [x4, y4, z4] = std::make_tuple (x + width, y - height, z);
-    const auto [x5, y5, z5] = std::make_tuple (x + width, y, z - depth);
-    const auto [x6, y6, z6] = std::make_tuple (x, y - height, z - depth);
-    const auto [x7, y7, z7] = std::make_tuple (x + width, y - height, z - depth);
+	const auto [x0, y0, z0] = std::make_tuple (x        , y         , z         );
+    const auto [x1, y1, z1] = std::make_tuple (x + width, y         , z         );
+    const auto [x2, y2, z2] = std::make_tuple (x        , y - height, z         );
+    const auto [x3, y3, z3] = std::make_tuple (x        , y         , z - depth );
+    const auto [x4, y4, z4] = std::make_tuple (x + width, y - height, z         );
+    const auto [x5, y5, z5] = std::make_tuple (x + width, y         , z - depth );
+    const auto [x6, y6, z6] = std::make_tuple (x        , y - height, z - depth );
+    const auto [x7, y7, z7] = std::make_tuple (x + width, y - height, z - depth );
 
     // Adding triangles to matrix
     T.add_triangle (x0, y0, z0, x2, y2, z2, x4, y4, z4);
