@@ -93,8 +93,7 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			draw_lines (T, S, WHITE);
 			T.clear();
 		} else if (cmd == "clear") {
-			E.clear();
-			T.clear();
+			S.clear();
 		} else if (cmd == "apply") {
 			E *= cstack.top();
 			T *= cstack.top();
@@ -109,9 +108,6 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 		} else if (cmd == "save") {
 			std::string fname;
 			fin >> fname;
-			S.clear ();
-			draw_lines (E, S, WHITE);
-			draw_lines (T, S, WHITE);
 			fname = "img/" + fname;
 			S.to_ppm (fname);
 			std::string fsave = "convert " + fname + ".ppm " + fname;

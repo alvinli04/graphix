@@ -1,5 +1,5 @@
 make clean
-python gen.py
+python3 gen.py
 make
 cd img
 convert * test.gif

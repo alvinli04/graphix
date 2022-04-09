@@ -1,0 +1,2907 @@
+push
+move
+250 250 0
+rotate
+x 20
+rotate
+z 20
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+200.0 0 -0.0 25
+push
+move
+200.0 0 -0.0
+rotate
+z 60
+sphere
+50.0 0 -0.0 10
+pop
+push
+rotate
+z -0.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 0.0
+torus
+0 0 0 5 90
+pop
+save
+frame000.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+199.6053456856543 0 -12.558103905862675 25
+push
+move
+199.6053456856543 0 -12.558103905862675
+rotate
+z 60
+sphere
+49.60573506572389 0 -6.266661678215213 10
+pop
+push
+rotate
+z -3.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 3.6
+torus
+0 0 0 5 90
+pop
+save
+frame001.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+198.42294026289557 0 -25.06664671286085 25
+push
+move
+198.42294026289557 0 -25.06664671286085
+rotate
+z 60
+sphere
+48.429158056431554 0 -12.43449435824274 10
+pop
+push
+rotate
+z -7.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 7.2
+torus
+0 0 0 5 90
+pop
+save
+frame002.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+196.45745014573774 0 -37.47626291714492 25
+push
+move
+196.45745014573774 0 -37.47626291714492
+rotate
+z 60
+sphere
+46.488824294412574 0 -18.406227634233897 10
+pop
+push
+rotate
+z -10.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 10.8
+torus
+0 0 0 5 90
+pop
+save
+frame003.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+193.71663222572622 0 -49.73797743297096 25
+push
+move
+193.71663222572622 0 -49.73797743297096
+rotate
+z 60
+sphere
+43.81533400219318 0 -24.087683705085766 10
+pop
+push
+rotate
+z -14.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 14.4
+torus
+0 0 0 5 90
+pop
+save
+frame004.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+190.2113032590307 0 -61.803398874989476 25
+push
+move
+190.2113032590307 0 -61.803398874989476
+rotate
+z 60
+sphere
+40.45084971874737 0 -29.389262614623657 10
+pop
+push
+rotate
+z -18.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 18.0
+torus
+0 0 0 5 90
+pop
+save
+frame005.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+185.9552971776503 0 -73.62491053693559 25
+push
+move
+185.9552971776503 0 -73.62491053693559
+rotate
+z 60
+sphere
+36.448431371070576 0 -34.22735529643443 10
+pop
+push
+rotate
+z -21.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 21.6
+torus
+0 0 0 5 90
+pop
+save
+frame006.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+180.9654104932039 0 -85.15585831301452 25
+push
+move
+180.9654104932039 0 -85.15585831301452
+rotate
+z 60
+sphere
+31.87119948743449 0 -38.52566213878946 10
+pop
+push
+rotate
+z -25.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 25.2
+torus
+0 0 0 5 90
+pop
+save
+frame007.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+175.26133600877273 0 -96.35073482034306 25
+push
+move
+175.26133600877273 0 -96.35073482034306
+rotate
+z 60
+sphere
+26.791339748949827 0 -42.216396275100756 10
+pop
+push
+rotate
+z -28.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 28.8
+torus
+0 0 0 5 90
+pop
+save
+frame008.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+168.86558510040302 0 -107.16535899579931 25
+push
+move
+168.86558510040302 0 -107.16535899579931
+rotate
+z 60
+sphere
+21.28896457825364 0 -45.241352623300976 10
+pop
+push
+rotate
+z -32.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 32.4
+torus
+0 0 0 5 90
+pop
+save
+frame009.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+161.80339887498948 0 -117.55705045849463 25
+push
+move
+161.80339887498948 0 -117.55705045849463
+rotate
+z 60
+sphere
+15.450849718747373 0 -47.552825814757675 10
+pop
+push
+rotate
+z -36.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 36.0
+torus
+0 0 0 5 90
+pop
+save
+frame010.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+154.10264855515783 0 -127.48479794973795 25
+push
+move
+154.10264855515783 0 -127.48479794973795
+rotate
+z 60
+sphere
+9.369065729286225 0 -49.114362536434435 10
+pop
+push
+rotate
+z -39.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 39.6
+torus
+0 0 0 5 90
+pop
+save
+frame011.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+145.7937254842823 0 -136.90942118573773 25
+push
+move
+145.7937254842823 0 -136.90942118573773
+rotate
+z 60
+sphere
+3.139525976465676 0 -49.901336421413575 10
+pop
+push
+rotate
+z -43.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 43.2
+torus
+0 0 0 5 90
+pop
+save
+frame012.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+136.90942118573773 0 -145.7937254842823 25
+push
+move
+136.90942118573773 0 -145.7937254842823
+rotate
+z 60
+sphere
+-3.13952597646567 0 -49.901336421413575 10
+pop
+push
+rotate
+z -46.800000000000004
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 46.800000000000004
+torus
+0 0 0 5 90
+pop
+save
+frame013.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+127.48479794973797 0 -154.10264855515783 25
+push
+move
+127.48479794973797 0 -154.10264855515783
+rotate
+z 60
+sphere
+-9.36906572928622 0 -49.114362536434435 10
+pop
+push
+rotate
+z -50.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 50.4
+torus
+0 0 0 5 90
+pop
+save
+frame014.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+117.55705045849463 0 -161.80339887498948 25
+push
+move
+117.55705045849463 0 -161.80339887498948
+rotate
+z 60
+sphere
+-15.450849718747367 0 -47.55282581475768 10
+pop
+push
+rotate
+z -54.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 54.0
+torus
+0 0 0 5 90
+pop
+save
+frame015.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+107.16535899579931 0 -168.86558510040302 25
+push
+move
+107.16535899579931 0 -168.86558510040302
+rotate
+z 60
+sphere
+-21.288964578253637 0 -45.241352623300976 10
+pop
+push
+rotate
+z -57.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 57.6
+torus
+0 0 0 5 90
+pop
+save
+frame016.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+96.35073482034306 0 -175.26133600877273 25
+push
+move
+96.35073482034306 0 -175.26133600877273
+rotate
+z 60
+sphere
+-26.79133974894982 0 -42.216396275100756 10
+pop
+push
+rotate
+z -61.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 61.2
+torus
+0 0 0 5 90
+pop
+save
+frame017.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+85.15585831301456 0 -180.9654104932039 25
+push
+move
+85.15585831301456 0 -180.9654104932039
+rotate
+z 60
+sphere
+-31.87119948743447 0 -38.52566213878947 10
+pop
+push
+rotate
+z -64.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 64.8
+torus
+0 0 0 5 90
+pop
+save
+frame018.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+73.62491053693557 0 -185.9552971776503 25
+push
+move
+73.62491053693557 0 -185.9552971776503
+rotate
+z 60
+sphere
+-36.44843137107058 0 -34.227355296434425 10
+pop
+push
+rotate
+z -68.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 68.4
+torus
+0 0 0 5 90
+pop
+save
+frame019.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+61.80339887498949 0 -190.2113032590307 25
+push
+move
+61.80339887498949 0 -190.2113032590307
+rotate
+z 60
+sphere
+-40.450849718747364 0 -29.38926261462366 10
+pop
+push
+rotate
+z -72.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 72.0
+torus
+0 0 0 5 90
+pop
+save
+frame020.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+49.73797743297095 0 -193.71663222572622 25
+push
+move
+49.73797743297095 0 -193.71663222572622
+rotate
+z 60
+sphere
+-43.81533400219318 0 -24.08768370508576 10
+pop
+push
+rotate
+z -75.60000000000001
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 75.60000000000001
+torus
+0 0 0 5 90
+pop
+save
+frame021.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+37.4762629171449 0 -196.45745014573774 25
+push
+move
+37.4762629171449 0 -196.45745014573774
+rotate
+z 60
+sphere
+-46.488824294412574 0 -18.406227634233886 10
+pop
+push
+rotate
+z -79.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 79.2
+torus
+0 0 0 5 90
+pop
+save
+frame022.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+25.06664671286085 0 -198.42294026289557 25
+push
+move
+25.06664671286085 0 -198.42294026289557
+rotate
+z 60
+sphere
+-48.429158056431554 0 -12.434494358242741 10
+pop
+push
+rotate
+z -82.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 82.8
+torus
+0 0 0 5 90
+pop
+save
+frame023.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+12.558103905862705 0 -199.6053456856543 25
+push
+move
+12.558103905862705 0 -199.6053456856543
+rotate
+z 60
+sphere
+-49.60573506572389 0 -6.266661678215227 10
+pop
+push
+rotate
+z -86.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 86.4
+torus
+0 0 0 5 90
+pop
+save
+frame024.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+1.2246467991473532e-14 0 -200.0 25
+push
+move
+1.2246467991473532e-14 0 -200.0
+rotate
+z 60
+sphere
+-50.0 0 -6.123233995736766e-15 10
+pop
+push
+rotate
+z -90.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 90.0
+torus
+0 0 0 5 90
+pop
+save
+frame025.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-12.55810390586268 0 -199.6053456856543 25
+push
+move
+-12.55810390586268 0 -199.6053456856543
+rotate
+z 60
+sphere
+-49.60573506572389 0 6.266661678215215 10
+pop
+push
+rotate
+z -93.60000000000001
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 93.60000000000001
+torus
+0 0 0 5 90
+pop
+save
+frame026.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-25.066646712860873 0 -198.42294026289557 25
+push
+move
+-25.066646712860873 0 -198.42294026289557
+rotate
+z 60
+sphere
+-48.429158056431554 0 12.43449435824275 10
+pop
+push
+rotate
+z -97.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 97.2
+torus
+0 0 0 5 90
+pop
+save
+frame027.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-37.47626291714488 0 -196.45745014573774 25
+push
+move
+-37.47626291714488 0 -196.45745014573774
+rotate
+z 60
+sphere
+-46.48882429441258 0 18.406227634233872 10
+pop
+push
+rotate
+z -100.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 100.8
+torus
+0 0 0 5 90
+pop
+save
+frame028.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-49.73797743297097 0 -193.71663222572622 25
+push
+move
+-49.73797743297097 0 -193.71663222572622
+rotate
+z 60
+sphere
+-43.815334002193175 0 24.08768370508577 10
+pop
+push
+rotate
+z -104.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 104.4
+torus
+0 0 0 5 90
+pop
+save
+frame029.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-61.80339887498947 0 -190.21130325903073 25
+push
+move
+-61.80339887498947 0 -190.21130325903073
+rotate
+z 60
+sphere
+-40.45084971874738 0 29.38926261462365 10
+pop
+push
+rotate
+z -108.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 108.0
+torus
+0 0 0 5 90
+pop
+save
+frame030.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-73.62491053693564 0 -185.95529717765027 25
+push
+move
+-73.62491053693564 0 -185.95529717765027
+rotate
+z 60
+sphere
+-36.44843137107056 0 34.22735529643445 10
+pop
+push
+rotate
+z -111.60000000000001
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 111.60000000000001
+torus
+0 0 0 5 90
+pop
+save
+frame031.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-85.15585831301455 0 -180.9654104932039 25
+push
+move
+-85.15585831301455 0 -180.9654104932039
+rotate
+z 60
+sphere
+-31.871199487434478 0 38.52566213878947 10
+pop
+push
+rotate
+z -115.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 115.2
+torus
+0 0 0 5 90
+pop
+save
+frame032.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-96.350734820343 0 -175.26133600877273 25
+push
+move
+-96.350734820343 0 -175.26133600877273
+rotate
+z 60
+sphere
+-26.791339748949856 0 42.21639627510074 10
+pop
+push
+rotate
+z -118.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 118.8
+torus
+0 0 0 5 90
+pop
+save
+frame033.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-107.16535899579928 0 -168.86558510040302 25
+push
+move
+-107.16535899579928 0 -168.86558510040302
+rotate
+z 60
+sphere
+-21.288964578253648 0 45.24135262330097 10
+pop
+push
+rotate
+z -122.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 122.4
+torus
+0 0 0 5 90
+pop
+save
+frame034.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-117.5570504584946 0 -161.80339887498948 25
+push
+move
+-117.5570504584946 0 -161.80339887498948
+rotate
+z 60
+sphere
+-15.450849718747378 0 47.552825814757675 10
+pop
+push
+rotate
+z -126.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 126.0
+torus
+0 0 0 5 90
+pop
+save
+frame035.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-127.48479794973788 0 -154.10264855515788 25
+push
+move
+-127.48479794973788 0 -154.10264855515788
+rotate
+z 60
+sphere
+-9.369065729286275 0 49.11436253643443 10
+pop
+push
+rotate
+z -129.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 129.6
+torus
+0 0 0 5 90
+pop
+save
+frame036.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-136.90942118573776 0 -145.79372548428228 25
+push
+move
+-136.90942118573776 0 -145.79372548428228
+rotate
+z 60
+sphere
+-3.1395259764656602 0 49.901336421413575 10
+pop
+push
+rotate
+z -133.20000000000002
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 133.20000000000002
+torus
+0 0 0 5 90
+pop
+save
+frame037.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-145.79372548428233 0 -136.9094211857377 25
+push
+move
+-145.79372548428233 0 -136.9094211857377
+rotate
+z 60
+sphere
+3.139525976465686 0 49.901336421413575 10
+pop
+push
+rotate
+z -136.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 136.8
+torus
+0 0 0 5 90
+pop
+save
+frame038.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-154.10264855515783 0 -127.48479794973797 25
+push
+move
+-154.10264855515783 0 -127.48479794973797
+rotate
+z 60
+sphere
+9.369065729286213 0 49.114362536434435 10
+pop
+push
+rotate
+z -140.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 140.4
+torus
+0 0 0 5 90
+pop
+save
+frame039.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-161.80339887498945 0 -117.55705045849464 25
+push
+move
+-161.80339887498945 0 -117.55705045849464
+rotate
+z 60
+sphere
+15.450849718747362 0 47.55282581475768 10
+pop
+push
+rotate
+z -144.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 144.0
+torus
+0 0 0 5 90
+pop
+save
+frame040.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-168.86558510040302 0 -107.16535899579934 25
+push
+move
+-168.86558510040302 0 -107.16535899579934
+rotate
+z 60
+sphere
+21.28896457825363 0 45.241352623300976 10
+pop
+push
+rotate
+z -147.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 147.6
+torus
+0 0 0 5 90
+pop
+save
+frame041.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-175.26133600877273 0 -96.35073482034304 25
+push
+move
+-175.26133600877273 0 -96.35073482034304
+rotate
+z 60
+sphere
+26.791339748949838 0 42.21639627510075 10
+pop
+push
+rotate
+z -151.20000000000002
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 151.20000000000002
+torus
+0 0 0 5 90
+pop
+save
+frame042.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-180.9654104932039 0 -85.1558583130145 25
+push
+move
+-180.9654104932039 0 -85.1558583130145
+rotate
+z 60
+sphere
+31.8711994874345 0 38.52566213878945 10
+pop
+push
+rotate
+z -154.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 154.8
+torus
+0 0 0 5 90
+pop
+save
+frame043.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-185.9552971776503 0 -73.62491053693554 25
+push
+move
+-185.9552971776503 0 -73.62491053693554
+rotate
+z 60
+sphere
+36.4484313710706 0 34.22735529643441 10
+pop
+push
+rotate
+z -158.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 158.4
+torus
+0 0 0 5 90
+pop
+save
+frame044.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-190.2113032590307 0 -61.803398874989504 25
+push
+move
+-190.2113032590307 0 -61.803398874989504
+rotate
+z 60
+sphere
+40.450849718747364 0 29.389262614623668 10
+pop
+push
+rotate
+z -162.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 162.0
+torus
+0 0 0 5 90
+pop
+save
+frame045.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-193.71663222572622 0 -49.737977432970965 25
+push
+move
+-193.71663222572622 0 -49.737977432970965
+rotate
+z 60
+sphere
+43.81533400219318 0 24.087683705085766 10
+pop
+push
+rotate
+z -165.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 165.6
+torus
+0 0 0 5 90
+pop
+save
+frame046.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-196.45745014573774 0 -37.47626291714482 25
+push
+move
+-196.45745014573774 0 -37.47626291714482
+rotate
+z 60
+sphere
+46.48882429441259 0 18.40622763423385 10
+pop
+push
+rotate
+z -169.20000000000002
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 169.20000000000002
+torus
+0 0 0 5 90
+pop
+save
+frame047.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-198.42294026289557 0 -25.06664671286091 25
+push
+move
+-198.42294026289557 0 -25.06664671286091
+rotate
+z 60
+sphere
+48.42915805643155 0 12.434494358242768 10
+pop
+push
+rotate
+z -172.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 172.8
+torus
+0 0 0 5 90
+pop
+save
+frame048.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-199.6053456856543 0 -12.558103905862716 25
+push
+move
+-199.6053456856543 0 -12.558103905862716
+rotate
+z 60
+sphere
+49.60573506572389 0 6.2666616782152325 10
+pop
+push
+rotate
+z -176.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 176.4
+torus
+0 0 0 5 90
+pop
+save
+frame049.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-200.0 0 -2.4492935982947064e-14 25
+push
+move
+-200.0 0 -2.4492935982947064e-14
+rotate
+z 60
+sphere
+50.0 0 1.2246467991473532e-14 10
+pop
+push
+rotate
+z -180.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 180.0
+torus
+0 0 0 5 90
+pop
+save
+frame050.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-199.6053456856543 0 12.55810390586267 25
+push
+move
+-199.6053456856543 0 12.55810390586267
+rotate
+z 60
+sphere
+49.60573506572389 0 -6.2666616782152085 10
+pop
+push
+rotate
+z -183.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 183.6
+torus
+0 0 0 5 90
+pop
+save
+frame051.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-198.42294026289557 0 25.06664671286086 25
+push
+move
+-198.42294026289557 0 25.06664671286086
+rotate
+z 60
+sphere
+48.429158056431554 0 -12.434494358242745 10
+pop
+push
+rotate
+z -187.20000000000002
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 187.20000000000002
+torus
+0 0 0 5 90
+pop
+save
+frame052.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-196.4574501457377 0 37.47626291714495 25
+push
+move
+-196.4574501457377 0 37.47626291714495
+rotate
+z 60
+sphere
+46.48882429441257 0 -18.40622763423391 10
+pop
+push
+rotate
+z -190.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 190.8
+torus
+0 0 0 5 90
+pop
+save
+frame053.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-193.71663222572622 0 49.737977432971 25
+push
+move
+-193.71663222572622 0 49.737977432971
+rotate
+z 60
+sphere
+43.81533400219317 0 -24.087683705085784 10
+pop
+push
+rotate
+z -194.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 194.4
+torus
+0 0 0 5 90
+pop
+save
+frame054.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-190.2113032590307 0 61.80339887498955 25
+push
+move
+-190.2113032590307 0 61.80339887498955
+rotate
+z 60
+sphere
+40.45084971874735 0 -29.38926261462368 10
+pop
+push
+rotate
+z -198.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 198.0
+torus
+0 0 0 5 90
+pop
+save
+frame055.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-185.95529717765032 0 73.62491053693549 25
+push
+move
+-185.95529717765032 0 73.62491053693549
+rotate
+z 60
+sphere
+36.44843137107061 0 -34.227355296434396 10
+pop
+push
+rotate
+z -201.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 201.6
+torus
+0 0 0 5 90
+pop
+save
+frame056.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-180.9654104932039 0 85.15585831301453 25
+push
+move
+-180.9654104932039 0 85.15585831301453
+rotate
+z 60
+sphere
+31.87119948743448 0 -38.525662138789464 10
+pop
+push
+rotate
+z -205.20000000000002
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 205.20000000000002
+torus
+0 0 0 5 90
+pop
+save
+frame057.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-175.2613360087727 0 96.35073482034308 25
+push
+move
+-175.2613360087727 0 96.35073482034308
+rotate
+z 60
+sphere
+26.79133974894982 0 -42.216396275100756 10
+pop
+push
+rotate
+z -208.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 208.8
+torus
+0 0 0 5 90
+pop
+save
+frame058.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-168.86558510040302 0 107.16535899579928 25
+push
+move
+-168.86558510040302 0 107.16535899579928
+rotate
+z 60
+sphere
+21.28896457825365 0 -45.24135262330097 10
+pop
+push
+rotate
+z -212.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 212.4
+torus
+0 0 0 5 90
+pop
+save
+frame059.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-161.8033988749895 0 117.5570504584946 25
+push
+move
+-161.8033988749895 0 117.5570504584946
+rotate
+z 60
+sphere
+15.450849718747387 0 -47.552825814757675 10
+pop
+push
+rotate
+z -216.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 216.0
+torus
+0 0 0 5 90
+pop
+save
+frame060.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-154.10264855515786 0 127.48479794973792 25
+push
+move
+-154.10264855515786 0 127.48479794973792
+rotate
+z 60
+sphere
+9.369065729286238 0 -49.11436253643443 10
+pop
+push
+rotate
+z -219.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 219.6
+torus
+0 0 0 5 90
+pop
+save
+frame061.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-145.79372548428225 0 136.9094211857378 25
+push
+move
+-145.79372548428225 0 136.9094211857378
+rotate
+z 60
+sphere
+3.139525976465622 0 -49.90133642141358 10
+pop
+push
+rotate
+z -223.20000000000002
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 223.20000000000002
+torus
+0 0 0 5 90
+pop
+save
+frame062.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-136.90942118573778 0 145.79372548428228 25
+push
+move
+-136.90942118573778 0 145.79372548428228
+rotate
+z 60
+sphere
+-3.1395259764656354 0 -49.901336421413575 10
+pop
+push
+rotate
+z -226.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 226.8
+torus
+0 0 0 5 90
+pop
+save
+frame063.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-127.48479794973791 0 154.10264855515788 25
+push
+move
+-127.48479794973791 0 154.10264855515788
+rotate
+z 60
+sphere
+-9.36906572928625 0 -49.11436253643443 10
+pop
+push
+rotate
+z -230.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 230.4
+torus
+0 0 0 5 90
+pop
+save
+frame064.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-117.55705045849464 0 161.80339887498945 25
+push
+move
+-117.55705045849464 0 161.80339887498945
+rotate
+z 60
+sphere
+-15.450849718747357 0 -47.55282581475768 10
+pop
+push
+rotate
+z -234.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 234.0
+torus
+0 0 0 5 90
+pop
+save
+frame065.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-107.16535899579942 0 168.86558510040297 25
+push
+move
+-107.16535899579942 0 168.86558510040297
+rotate
+z 60
+sphere
+-21.288964578253587 0 -45.241352623301 10
+pop
+push
+rotate
+z -237.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 237.6
+torus
+0 0 0 5 90
+pop
+save
+frame066.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-96.35073482034305 0 175.26133600877273 25
+push
+move
+-96.35073482034305 0 175.26133600877273
+rotate
+z 60
+sphere
+-26.791339748949834 0 -42.216396275100756 10
+pop
+push
+rotate
+z -241.20000000000002
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 241.20000000000002
+torus
+0 0 0 5 90
+pop
+save
+frame067.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-85.15585831301459 0 180.96541049320388 25
+push
+move
+-85.15585831301459 0 180.96541049320388
+rotate
+z 60
+sphere
+-31.87119948743446 0 -38.525662138789485 10
+pop
+push
+rotate
+z -244.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 244.8
+torus
+0 0 0 5 90
+pop
+save
+frame068.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-73.62491053693556 0 185.9552971776503 25
+push
+move
+-73.62491053693556 0 185.9552971776503
+rotate
+z 60
+sphere
+-36.44843137107059 0 -34.22735529643442 10
+pop
+push
+rotate
+z -248.4
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 248.4
+torus
+0 0 0 5 90
+pop
+save
+frame069.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-61.80339887498951 0 190.2113032590307 25
+push
+move
+-61.80339887498951 0 190.2113032590307
+rotate
+z 60
+sphere
+-40.450849718747364 0 -29.389262614623668 10
+pop
+push
+rotate
+z -252.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 252.0
+torus
+0 0 0 5 90
+pop
+save
+frame070.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-49.73797743297106 0 193.7166322257262 25
+push
+move
+-49.73797743297106 0 193.7166322257262
+rotate
+z 60
+sphere
+-43.815334002193154 0 -24.087683705085812 10
+pop
+push
+rotate
+z -255.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 255.6
+torus
+0 0 0 5 90
+pop
+save
+frame071.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-37.4762629171451 0 196.4574501457377 25
+push
+move
+-37.4762629171451 0 196.4574501457377
+rotate
+z 60
+sphere
+-46.48882429441254 0 -18.40622763423398 10
+pop
+push
+rotate
+z -259.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 259.2
+torus
+0 0 0 5 90
+pop
+save
+frame072.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-25.066646712860745 0 198.42294026289557 25
+push
+move
+-25.066646712860745 0 198.42294026289557
+rotate
+z 60
+sphere
+-48.42915805643157 0 -12.434494358242688 10
+pop
+push
+rotate
+z -262.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 262.8
+torus
+0 0 0 5 90
+pop
+save
+frame073.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-12.558103905862641 0 199.6053456856543 25
+push
+move
+-12.558103905862641 0 199.6053456856543
+rotate
+z 60
+sphere
+-49.60573506572389 0 -6.266661678215195 10
+pop
+push
+rotate
+z -266.40000000000003
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 266.40000000000003
+torus
+0 0 0 5 90
+pop
+save
+frame074.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+-3.6739403974420595e-14 0 200.0 25
+push
+move
+-3.6739403974420595e-14 0 200.0
+rotate
+z 60
+sphere
+-50.0 0 -1.8369701987210297e-14 10
+pop
+push
+rotate
+z -270.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 270.0
+torus
+0 0 0 5 90
+pop
+save
+frame075.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+12.558103905862744 0 199.6053456856543 25
+push
+move
+12.558103905862744 0 199.6053456856543
+rotate
+z 60
+sphere
+-49.60573506572389 0 6.266661678215247 10
+pop
+push
+rotate
+z -273.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 273.6
+torus
+0 0 0 5 90
+pop
+save
+frame076.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+25.066646712860845 0 198.42294026289557 25
+push
+move
+25.066646712860845 0 198.42294026289557
+rotate
+z 60
+sphere
+-48.429158056431554 0 12.434494358242738 10
+pop
+push
+rotate
+z -277.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 277.2
+torus
+0 0 0 5 90
+pop
+save
+frame077.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+37.47626291714485 0 196.45745014573774 25
+push
+move
+37.47626291714485 0 196.45745014573774
+rotate
+z 60
+sphere
+-46.48882429441258 0 18.40622763423386 10
+pop
+push
+rotate
+z -280.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 280.8
+torus
+0 0 0 5 90
+pop
+save
+frame078.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+49.737977432970986 0 193.71663222572622 25
+push
+move
+49.737977432970986 0 193.71663222572622
+rotate
+z 60
+sphere
+-43.815334002193175 0 24.087683705085777 10
+pop
+push
+rotate
+z -284.40000000000003
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 284.40000000000003
+torus
+0 0 0 5 90
+pop
+save
+frame079.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+61.80339887498945 0 190.21130325903073 25
+push
+move
+61.80339887498945 0 190.21130325903073
+rotate
+z 60
+sphere
+-40.450849718747385 0 29.38926261462364 10
+pop
+push
+rotate
+z -288.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 288.0
+torus
+0 0 0 5 90
+pop
+save
+frame080.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+73.62491053693564 0 185.95529717765024 25
+push
+move
+73.62491053693564 0 185.95529717765024
+rotate
+z 60
+sphere
+-36.448431371070555 0 34.22735529643446 10
+pop
+push
+rotate
+z -291.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 291.6
+torus
+0 0 0 5 90
+pop
+save
+frame081.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+85.15585831301452 0 180.9654104932039 25
+push
+move
+85.15585831301452 0 180.9654104932039
+rotate
+z 60
+sphere
+-31.871199487434488 0 38.525662138789464 10
+pop
+push
+rotate
+z -295.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 295.2
+torus
+0 0 0 5 90
+pop
+save
+frame082.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+96.35073482034299 0 175.26133600877276 25
+push
+move
+96.35073482034299 0 175.26133600877276
+rotate
+z 60
+sphere
+-26.79133974894986 0 42.216396275100735 10
+pop
+push
+rotate
+z -298.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 298.8
+torus
+0 0 0 5 90
+pop
+save
+frame083.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+107.16535899579935 0 168.865585100403 25
+push
+move
+107.16535899579935 0 168.865585100403
+rotate
+z 60
+sphere
+-21.28896457825362 0 45.24135262330098 10
+pop
+push
+rotate
+z -302.40000000000003
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 302.40000000000003
+torus
+0 0 0 5 90
+pop
+save
+frame084.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+117.55705045849459 0 161.8033988749895 25
+push
+move
+117.55705045849459 0 161.8033988749895
+rotate
+z 60
+sphere
+-15.450849718747392 0 47.55282581475767 10
+pop
+push
+rotate
+z -306.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 306.0
+torus
+0 0 0 5 90
+pop
+save
+frame085.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+127.484797949738 0 154.1026485551578 25
+push
+move
+127.484797949738 0 154.1026485551578
+rotate
+z 60
+sphere
+-9.3690657292862 0 49.11436253643444 10
+pop
+push
+rotate
+z -309.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 309.6
+torus
+0 0 0 5 90
+pop
+save
+frame086.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+136.90942118573759 0 145.79372548428242 25
+push
+move
+136.90942118573759 0 145.79372548428242
+rotate
+z 60
+sphere
+-3.139525976465761 0 49.901336421413575 10
+pop
+push
+rotate
+z -313.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 313.2
+torus
+0 0 0 5 90
+pop
+save
+frame087.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+145.7937254842824 0 136.90942118573764 25
+push
+move
+145.7937254842824 0 136.90942118573764
+rotate
+z 60
+sphere
+3.139525976465718 0 49.901336421413575 10
+pop
+push
+rotate
+z -316.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 316.8
+torus
+0 0 0 5 90
+pop
+save
+frame088.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+154.10264855515788 0 127.48479794973792 25
+push
+move
+154.10264855515788 0 127.48479794973792
+rotate
+z 60
+sphere
+9.369065729286245 0 49.11436253643443 10
+pop
+push
+rotate
+z -320.40000000000003
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 320.40000000000003
+torus
+0 0 0 5 90
+pop
+save
+frame089.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+161.80339887498945 0 117.55705045849467 25
+push
+move
+161.80339887498945 0 117.55705045849467
+rotate
+z 60
+sphere
+15.45084971874735 0 47.55282581475769 10
+pop
+push
+rotate
+z -324.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 324.0
+torus
+0 0 0 5 90
+pop
+save
+frame090.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+168.86558510040294 0 107.16535899579942 25
+push
+move
+168.86558510040294 0 107.16535899579942
+rotate
+z 60
+sphere
+21.28896457825358 0 45.241352623301 10
+pop
+push
+rotate
+z -327.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 327.6
+torus
+0 0 0 5 90
+pop
+save
+frame091.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+175.26133600877273 0 96.35073482034306 25
+push
+move
+175.26133600877273 0 96.35073482034306
+rotate
+z 60
+sphere
+26.791339748949827 0 42.216396275100756 10
+pop
+push
+rotate
+z -331.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 331.2
+torus
+0 0 0 5 90
+pop
+save
+frame092.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+180.96541049320388 0 85.1558583130146 25
+push
+move
+180.96541049320388 0 85.1558583130146
+rotate
+z 60
+sphere
+31.871199487434453 0 38.525662138789485 10
+pop
+push
+rotate
+z -334.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 334.8
+torus
+0 0 0 5 90
+pop
+save
+frame093.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+185.95529717765035 0 73.6249105369354 25
+push
+move
+185.95529717765035 0 73.6249105369354
+rotate
+z 60
+sphere
+36.44843137107065 0 34.22735529643436 10
+pop
+push
+rotate
+z -338.40000000000003
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 338.40000000000003
+torus
+0 0 0 5 90
+pop
+save
+frame094.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+190.2113032590307 0 61.803398874989526 25
+push
+move
+190.2113032590307 0 61.803398874989526
+rotate
+z 60
+sphere
+40.45084971874736 0 29.389262614623675 10
+pop
+push
+rotate
+z -342.0
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 342.0
+torus
+0 0 0 5 90
+pop
+save
+frame095.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+193.7166322257262 0 49.73797743297107 25
+push
+move
+193.7166322257262 0 49.73797743297107
+rotate
+z 60
+sphere
+43.815334002193154 0 24.087683705085816 10
+pop
+push
+rotate
+z -345.6
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 345.6
+torus
+0 0 0 5 90
+pop
+save
+frame096.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+196.45745014573774 0 37.476262917144936 25
+push
+move
+196.45745014573774 0 37.476262917144936
+rotate
+z 60
+sphere
+46.48882429441257 0 18.406227634233904 10
+pop
+push
+rotate
+z -349.2
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 349.2
+torus
+0 0 0 5 90
+pop
+save
+frame097.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+198.42294026289557 0 25.06664671286093 25
+push
+move
+198.42294026289557 0 25.06664671286093
+rotate
+z 60
+sphere
+48.42915805643155 0 12.43449435824278 10
+pop
+push
+rotate
+z -352.8
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 352.8
+torus
+0 0 0 5 90
+pop
+save
+frame098.png
+clear
+rotate
+y 3.6
+sphere
+0 0 0 75
+sphere
+199.6053456856543 0 12.558103905862653 25
+push
+move
+199.6053456856543 0 12.558103905862653
+rotate
+z 60
+sphere
+49.60573506572389 0 6.2666616782152005 10
+pop
+push
+rotate
+z -356.40000000000003
+torus
+0 0 0 5 90
+pop
+push
+rotate
+z 356.40000000000003
+torus
+0 0 0 5 90
+pop
+save
+frame099.png
+clear
