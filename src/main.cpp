@@ -9,7 +9,7 @@
 #include "parser.hpp"
 #include "parametric.hpp"
 
-const int N = 500;
+const int N = 1000;
 
 int main (int argc, char** argv) {
 
@@ -20,7 +20,7 @@ int main (int argc, char** argv) {
     ident (M);
 	std::stack<matrix> cstack;
 	cstack.push(M);
-	
+
     if (argc == 2) parse_file (argv[1], cstack, E, T, S);
     else parse_file ("stdin", cstack, E, T, S);
 }

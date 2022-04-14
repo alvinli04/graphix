@@ -4,6 +4,7 @@
 #include "matrix.hpp"
 #include "screen.hpp"
 #include "draw.hpp"
+#include "color_constants.hpp"
 
 
 // Draws a line from (x0, y0) to (x1, y1)
@@ -103,6 +104,38 @@ void draw_lines (trianglelist& points, picture& p, const color& c) {
 			   dy1 = y2 - y1, dy2 = y3 - y1;
 
 		if (dx1 * dy2 > dx2 * dy1) {
+			// scanline conversion
+			if (y1 < y2) {
+				std::swap (y1, y2);
+				std::swap (x1, x2);
+			}
+			if (y1 < y3) {
+				std::swap (y1, y3);
+				std::swap (x1, x3);
+			}
+			if (y2 < y3) {
+				std::swap (y2, y3);
+				std::swap (x2, x3);
+			} // values are sorted in order y1, y2, y3
+
+			double bx0 = x3; // goes along BT
+			double bx1 = x3; // bx1 goes along the other 2 edges
+			double slopeBT = (x1 - x3) / (y1 - y3 + 1);
+			double slopeBM = (x2 - x3) / (y2 - y3 + 1);
+			double slopeMT = (x1 - x2) / (y1 - y2 + 1);
+			int y = y3;
+
+			while (y <= y1) {
+				draw_line (bx0, y, bx1, y, p, CYAN);
+				bx0 += slopeBT;
+				if (y < y2)
+					bx1 += slopeBM;
+				else
+					bx1 += slopeMT;
+				++y;
+			}
+
+			// draw triangle boundaries
 			draw_line (x1, y1, x2, y2, p, c);
 			draw_line (x2, y2, x3, y3, p, c);
 			draw_line (x3, y3, x1, y1, p, c);
