@@ -9,18 +9,20 @@
 #include "parser.hpp"
 #include "parametric.hpp"
 
-const int N = 1000;
+const int N = 500;
 
 int main (int argc, char** argv) {
 
     picture S (N, N);
 	edgelist E; // Edgelist that holds all edges
 	trianglelist T; // Triangle list for 3D shapes
+	std::vector<std::vector<double>> zbuffer (N, std::vector<double> (N, -std::numeric_limits<double>::infinity()));
+
 	matrix M (4,4); // Keeps track of all transformations
     ident (M);
 	std::stack<matrix> cstack;
 	cstack.push(M);
 
-    if (argc == 2) parse_file (argv[1], cstack, E, T, S);
-    else parse_file ("stdin", cstack, E, T, S);
+    if (argc == 2) parse_file (argv[1], cstack, E, T, S, zbuffer);
+    else parse_file ("stdin", cstack, E, T, S, zbuffer);
 }

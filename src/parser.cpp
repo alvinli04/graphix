@@ -12,7 +12,7 @@
 #include "color_constants.hpp"
 #include "parametric.hpp"
 
-void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, trianglelist& T, picture& S) {
+void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, trianglelist& T, picture& S, std::vector<std::vector<double>>& zbuffer) {
 	std::ifstream fin (filename);
 	std::cout << "Opened " << filename << "\n";
 
@@ -27,7 +27,7 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			fin >> x0 >> y0 >> z0 >> x1 >> y1 >> z1;
 			E.add_edge (x0, y0, z0, x1, y1, z1);
 			E *= cstack.top();
-			draw_lines (E, S, WHITE);
+			draw_lines (E, S, WHITE, zbuffer);
 			E.clear();
 		} else if (cmd == "ident") {
 			ident (cstack.top());
@@ -55,42 +55,42 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			fin >> cx >> cy >> cz >> r;
 			circle (cx, cy, cz, r, E);
 			E *= cstack.top();
-			draw_lines (E, S, WHITE);
+			draw_lines (E, S, WHITE, zbuffer);
 			E.clear();
 		} else if (cmd == "hermite") {
 			double x0, y0, x1, y1, rx0, ry0, rx1, ry1;
 			fin >> x0 >> y0 >> x1 >> y1 >> rx0 >> ry0 >> rx1 >> ry1;
 			hermite (x0, y0, x1, y1, rx0, ry0, rx1, ry1, E);
 			E *= cstack.top();
-			draw_lines (E, S, WHITE);
+			draw_lines (E, S, WHITE, zbuffer);
 			E.clear();
 		} else if (cmd == "bezier") {
 			double x0, y0, x1, y1, x2, y2, x3, y3;
 			fin >> x0 >> y0 >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 			bezier (x0, y0, x1, y1, x2, y2, x3, y3, E);
 			E *= cstack.top();
-			draw_lines (E, S, WHITE);
+			draw_lines (E, S, WHITE, zbuffer);
 			E.clear();
 		} else if (cmd == "box") {
 			double x, y, z, width, height, depth;
 			fin >> x >> y >> z >> width >> height >> depth;
 			box (x, y, z, width, height, depth, T);
 			T *= cstack.top();
-			draw_lines (T, S, WHITE);
+			draw_lines (T, S, WHITE, zbuffer);
 			T.clear();
 		} else if (cmd == "sphere") {
 			double x, y, z, r;
 			fin >> x >> y >> z >> r;
 			sphere (x, y, z, r, T);
 			T *= cstack.top();
-			draw_lines (T, S, WHITE);
+			draw_lines (T, S, WHITE, zbuffer);
 			T.clear();
 		} else if (cmd == "torus") {
 			double x, y, z, r1, r2;
 			fin >> x >> y >> z >> r1 >> r2;
 			torus (x, y, z, r1, r2, T);
 			T *= cstack.top();
-			draw_lines (T, S, WHITE);
+			draw_lines (T, S, WHITE, zbuffer);
 			T.clear();
 		} else if (cmd == "clear") {
 			S.clear();
