@@ -29,7 +29,7 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = (z0 - z1) / B;
 
 		while (x <= x1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -49,7 +49,7 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = (z1 - z0) / A;
 
 		while (y <= y1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -69,7 +69,7 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = (z0 - z1) / B;
 
 		while (x <= x1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -89,7 +89,7 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = (z1 - z0) / A;
 
 		while (y >= y1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -150,13 +150,13 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 			double bz1 = ((int)y2 == (int)y3 ? z2 : z3);
 			int y = y3;
 
-			double slopeBT = (x1 - x3) / (y1 - y3);
-			double slopeBM = (x2 - x3) / (y2 - y3);
-			double slopeMT = (x1 - x2) / (y1 - y2);
+			double slopeBT = (x1 - x3) / (y1 - y3 + 1);
+			double slopeBM = (x2 - x3) / (y2 - y3 + 1);
+			double slopeMT = (x1 - x2) / (y1 - y2 + 1);
 
-			double slopeBTz = (z1 - z3) / (y1 - y3);
-			double slopeBMz = (z2 - z3) / (y2 - y3);
-			double slopeMTz = (z1 - z2) / (y1 - y2);
+			double slopeBTz = (z1 - z3) / (y1 - y3 + 1);
+			double slopeBMz = (z2 - z3) / (y2 - y3 + 1);
+			double slopeMTz = (z1 - z2) / (y1 - y2 + 1);
 
 			while (y <= y1) {
 				if(!(bx0 >= std::min({x1, x2, x3}) && bx0 <= std::max({x1, x2, x3}))) {
@@ -187,9 +187,9 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 			}
 
 			// draw triangle boundaries
-			// draw_line (x1, y1, x2, y2, p, c);
-			// draw_line (x2, y2, x3, y3, p, c);
-			// draw_line (x3, y3, x1, y1, p, c);
+			// draw_line (x1, y1, z1, x2, y2, z2, p, c, zbuffer);
+			// draw_line (x2, y2, z2, x3, y3, z3, p, c, zbuffer);
+			// draw_line (x3, y3, z3, x1, y1, z1, p, c, zbuffer);
 		}
 	}
 }
