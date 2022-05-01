@@ -129,7 +129,8 @@ color get_color (double x1, double y1, double z1,
 	// normalize
 	Nx /= Nnorm, Ny /= Nnorm, Nz /= Nnorm;
 
-	color c_f;
+	// ambient light
+	color c_f (ka * ambient.red, ka * ambient.green, ka * ambient.blue);
 
 	for (light& l : lights) {
 		// get L vector
@@ -139,22 +140,34 @@ color get_color (double x1, double y1, double z1,
 		double lnorm = std::sqrt (lx*lx + ly*ly + lz*lz);
 		lx /= lnorm, ly /= lnorm, lz /= lnorm;
 
-		// ambient
-		color c_amb = color (ka * l.c.red, ka * l.c.green, ka * l.c.blue);
-		c_f = color(max(255, c_f.red + c_amb.red), max(255, c_f.green + c_amb.green), max(255, c_f.blue + c_amb.blue));
-
 		// diffuse
-		double ct = lx * Nx + ly * Ny + lz * Nz;
-		color c_diff = color (kd * ct * l.c.red, kd * ct * l.c.green, kd * ct * l.c.blue);
-		c_f = color(max(255, c_f.red + c_diff.red), max(255, c_f.green + c_diff.green), max(255, c_f.blue + c_diff.blue));
+		double ct = std::max (0.0, lx * Nx + ly * Ny + lz * Nz);
+		
+		double cdr = kd * ct * l.c.red;
+		double cdg = kd * ct * l.c.green;
+		double cdb = kd * ct * l.c.blue;
+		
+		c_f.red   = (cdr < 255 - c_f.red   ? c_f.red   + cdr : 255);
+		c_f.green = (cdg < 255 - c_f.green ? c_f.green + cdg : 255);
+		c_f.blue  = (cdb < 255 - c_f.blue  ? c_f.blue  + cdb : 255);
 
+		// specular
+		double rfz = std::max(0.0, 2 * ct * Nz - lz);
+
+		cdr = ks * rfz * l.c.red;
+		cdg = ks * rfz * l.c.green;
+		cdb = ks * rfz * l.c.blue;
+
+		c_f.red   = (cdr < 255 - c_f.red   ? c_f.red   + cdr : 255);
+		c_f.green = (cdg < 255 - c_f.green ? c_f.green + cdg : 255);
+		c_f.blue  = (cdb < 255 - c_f.blue  ? c_f.blue  + cdb : 255);
 	}
 
 	return c_f;
 }
 
 // Draws lines from a triangle list
-void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<std::vector<double>>& zbuffer
+void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<std::vector<double>>& zbuffer,
 				 const color& ambient, std::vector<light>& lights, double ka = 1, double kd = 1, double ks = 1) {
 	for (int i = 0; i < points.cols; i += 3) {
 		double x1 = points[0][i]  , y1 = points[1][i]  , z1 = points[2][i]  ,
@@ -167,7 +180,7 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 		if (dx1 * dy2 > dx2 * dy1 + 1) {
 
 			// color calculation
-			color c_f = get_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, lights, ka, kd, ks);
+			color c_f = get_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka, kd, ks);
 
 			// scanline conversion
 			if (y1 < y2) {

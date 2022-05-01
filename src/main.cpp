@@ -10,6 +10,9 @@
 #include "parametric.hpp"
 
 const int N = 500;
+const double ka = .33;
+const double kd = .33;
+const double ks = .33;
 
 int main (int argc, char** argv) {
 
@@ -23,6 +26,12 @@ int main (int argc, char** argv) {
 	std::stack<matrix> cstack;
 	cstack.push(M);
 
-    if (argc == 2) parse_file (argv[1], cstack, E, T, S, zbuffer);
-    else parse_file ("stdin", cstack, E, T, S, zbuffer);
+	color ambient (100, 100, 100);
+	std::vector<light> lights;
+	lights.push_back (light (500, 500, 500, color (255, 255, 255)));
+
+    if (argc == 2) 
+    	parse_file (argv[1], cstack, E, T, S, zbuffer, ambient, lights, ka, kd, ks);
+    else 
+    	parse_file ("stdin", cstack, E, T, S, zbuffer, ambient, lights, ka, kd, ks);
 }

@@ -12,7 +12,8 @@
 #include "color_constants.hpp"
 #include "parametric.hpp"
 
-void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, trianglelist& T, picture& S, std::vector<std::vector<double>>& zbuffer) {
+void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, trianglelist& T, picture& S, std::vector<std::vector<double>>& zbuffer,
+				 const color& ambient, std::vector<light>& lights, double ka = .33, double kd = .33, double ks = .33) {
 	std::ifstream fin (filename);
 	std::cout << "Opened " << filename << "\n";
 
@@ -76,21 +77,21 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 			fin >> x >> y >> z >> width >> height >> depth;
 			box (x, y, z, width, height, depth, T);
 			T *= cstack.top();
-			draw_lines (T, S, WHITE, zbuffer);
+			draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka, kd, ks);
 			T.clear();
 		} else if (cmd == "sphere") {
 			double x, y, z, r;
 			fin >> x >> y >> z >> r;
 			sphere (x, y, z, r, T);
 			T *= cstack.top();
-			draw_lines (T, S, WHITE, zbuffer);
+			draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka, kd, ks);
 			T.clear();
 		} else if (cmd == "torus") {
 			double x, y, z, r1, r2;
 			fin >> x >> y >> z >> r1 >> r2;
 			torus (x, y, z, r1, r2, T);
 			T *= cstack.top();
-			draw_lines (T, S, WHITE, zbuffer);
+			draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka, kd, ks);
 			T.clear();
 		} else if (cmd == "clear") {
 			S.clear();

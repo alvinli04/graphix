@@ -6,4 +6,5 @@
 #include "matrix.hpp"
 #include "screen.hpp"
 
-void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, trianglelist& T, picture& s, std::vector<std::vector<double>>& zbuffer);
+void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, trianglelist& T, picture& s, std::vector<std::vector<double>>& zbuffer,
+                 const color& ambient, std::vector<light>& lights, double ka, double kd, double ks);
