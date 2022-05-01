@@ -118,7 +118,9 @@ color get_color (double x1, double y1, double z1,
 				 double x2, double y2, double z2,
 				 double x3, double y3, double z3,
 				 const color& ambient, std::vector<light>& lights,
-				 double ka, double kd, double ks) {
+				 double ka_r, double kd_r, double ks_r,
+				 double ka_g, double kd_g, double ks_g,
+				 double ka_b, double kd_b, double ks_b) {
 	// Get the normal
 	double ax = x2 - x1, ay = y2 - y1, az = z2 - z1;
 	double bx = x3 - x1, by = y3 - y1, bz = z3 - z1;
@@ -130,7 +132,7 @@ color get_color (double x1, double y1, double z1,
 	Nx /= Nnorm, Ny /= Nnorm, Nz /= Nnorm;
 
 	// ambient light
-	color c_f (ka * ambient.red, ka * ambient.green, ka * ambient.blue);
+	color c_f (ka_r * ambient.red, ka_g * ambient.green, ka_b * ambient.blue);
 
 	for (light& l : lights) {
 		// get L vector
@@ -143,9 +145,9 @@ color get_color (double x1, double y1, double z1,
 		// diffuse
 		double ct = std::max (0.0, lx * Nx + ly * Ny + lz * Nz);
 		
-		double cdr = kd * ct * l.c.red;
-		double cdg = kd * ct * l.c.green;
-		double cdb = kd * ct * l.c.blue;
+		double cdr = kd_r * ct * l.c.red;
+		double cdg = kd_g * ct * l.c.green;
+		double cdb = kd_b * ct * l.c.blue;
 		
 		c_f.red   = (cdr < 255 - c_f.red   ? c_f.red   + cdr : 255);
 		c_f.green = (cdg < 255 - c_f.green ? c_f.green + cdg : 255);
@@ -153,10 +155,11 @@ color get_color (double x1, double y1, double z1,
 
 		// specular
 		double rfz = std::max(0.0, 2 * ct * Nz - lz);
+		rfz = rfz * rfz;
 
-		cdr = ks * rfz * l.c.red;
-		cdg = ks * rfz * l.c.green;
-		cdb = ks * rfz * l.c.blue;
+		cdr = ks_r * rfz * l.c.red;
+		cdg = ks_g * rfz * l.c.green;
+		cdb = ks_b * rfz * l.c.blue;
 
 		c_f.red   = (cdr < 255 - c_f.red   ? c_f.red   + cdr : 255);
 		c_f.green = (cdg < 255 - c_f.green ? c_f.green + cdg : 255);
@@ -168,7 +171,10 @@ color get_color (double x1, double y1, double z1,
 
 // Draws lines from a triangle list
 void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<std::vector<double>>& zbuffer,
-				 const color& ambient, std::vector<light>& lights, double ka = 1, double kd = 1, double ks = 1) {
+				 const color& ambient, std::vector<light>& lights, 
+				 double ka_r, double kd_r, double ks_r,
+				 double ka_g, double kd_g, double ks_g,
+				 double ka_b, double kd_b, double ks_b) {
 	for (int i = 0; i < points.cols; i += 3) {
 		double x1 = points[0][i]  , y1 = points[1][i]  , z1 = points[2][i]  ,
 			   x2 = points[0][i+1], y2 = points[1][i+1], z2 = points[2][i+1],
@@ -180,7 +186,7 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 		if (dx1 * dy2 > dx2 * dy1 + 1) {
 
 			// color calculation
-			color c_f = get_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka, kd, ks);
+			color c_f = get_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
 
 			// scanline conversion
 			if (y1 < y2) {
@@ -238,9 +244,9 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 			}
 
 			// draw triangle boundaries
-			// draw_line (x1, y1, z1, x2, y2, z2, p, c, zbuffer);
-			// draw_line (x2, y2, z2, x3, y3, z3, p, c, zbuffer);
-			// draw_line (x3, y3, z3, x1, y1, z1, p, c, zbuffer);
+			// draw_line (x1, y1, z1, x2, y2, z2, p, CYAN, zbuffer);
+			// draw_line (x2, y2, z2, x3, y3, z3, p, CYAN, zbuffer);
+			// draw_line (x3, y3, z3, x1, y1, z1, p, CYAN, zbuffer);
 		}
 	}
 }

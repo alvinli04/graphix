@@ -10,9 +10,7 @@
 #include "parametric.hpp"
 
 const int N = 500;
-const double ka = .33;
-const double kd = .33;
-const double ks = .33;
+
 
 int main (int argc, char** argv) {
 
@@ -26,12 +24,17 @@ int main (int argc, char** argv) {
 	std::stack<matrix> cstack;
 	cstack.push(M);
 
-	color ambient (100, 100, 100);
-	std::vector<light> lights;
-	lights.push_back (light (500, 500, 500, color (255, 255, 255)));
+	std::vector<light> lights; // vector with all point light sources
+
+	// temporary lighting stuff
+	color ambient (60, 60, 60);
+	lights.push_back (light (500, 750, 500, color (0, 255, 255)));
+	double ka_r = 0.1, ka_g = 0.1, ka_b = 0.1, kd_r = 0.5, kd_g = 0.5, kd_b = 0.5, ks_r = 0.5, ks_g = 0.5, ks_b = 0.5;
+
+
 
     if (argc == 2) 
-    	parse_file (argv[1], cstack, E, T, S, zbuffer, ambient, lights, ka, kd, ks);
+    	parse_file (argv[1], cstack, E, T, S, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
     else 
-    	parse_file ("stdin", cstack, E, T, S, zbuffer, ambient, lights, ka, kd, ks);
+    	parse_file ("stdin", cstack, E, T, S, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
 }
