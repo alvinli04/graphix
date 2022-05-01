@@ -44,6 +44,17 @@ std::ostream& operator<<(std::ostream& os, color const& c){
 	return (os << +c.red << " " << +c.green << " " << +c.blue);
 }
 
+//Light functions
+// ------------------------------
+
+//Constructor
+light::light (double x, double y, double z, const color& c) {
+	this->x = x;
+	this->y = y;
+	this->z = z;
+	this->c = c;
+}
+
 
 //Picture functions
 // ------------------------------

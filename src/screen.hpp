@@ -10,17 +10,28 @@ public:
     uint8_t red;
     uint8_t green;
     uint8_t blue;
-    
+
     color ();
 	color (int r, int g, int b);
-    
+
     void set (int r, int g, int b);
 	void set (const color& c);
-    
+
     friend std::ostream& operator<<(std::ostream& os, color const& c);
 
 };
 
+class light {
+
+public:
+    double x;
+    double y;
+    double z;
+    color c;
+
+    light (double x, double y, double z, const color& c);
+
+};
 
 class picture {
 
@@ -38,5 +49,4 @@ public:
     friend std::ostream& operator<<(std::ostream& os, picture const& p);
 	void to_ppm (std::string s);
 
-};  
-
+};
