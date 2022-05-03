@@ -26,10 +26,10 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 	if (y1 >= y0 && A <= B * -1) {
 		// octant 1
 		int D = 2 * A + B;
-		double dz = (z0 - z1) / B;
+		double dz = B != 0 ? (z0 - z1) / (B + 1) : 0;
 
 		while (x <= x1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -46,10 +46,10 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 	} else if (y1 >= y0) {
 		// octant 2
 		int D = A + 2 * B;
-		double dz = (z1 - z0) / A;
+		double dz = A != 0 ? (z1 - z0) / (A + 1) : 0;
 
 		while (y <= y1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -66,10 +66,10 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 	} else if (A >= B) {
 		// octant 8
 		int D = 2 * A - B;
-		double dz = (z0 - z1) / B;
+		double dz = B != 0 ? (z0 - z1) / (B + 1) : 0;
 
 		while (x <= x1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -86,10 +86,10 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 	} else {
 		// octant 7
 		int D = A - 2 * B;
-		double dz = (z1 - z0) / A;
+		double dz = A != 0 ? (z1 - z0) / (A + 1) : 0;
 
 		while (y >= y1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)z > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
 				p[y][x].set(c);
 				zbuffer[y][x] = z;
 			}
@@ -136,26 +136,27 @@ color get_color (double x1, double y1, double z1,
 
 	for (light& l : lights) {
 		// get L vector
-		double lx = l.x - (x1 + x2 + x3) / 3;
-		double ly = l.y - (y1 + y2 + y3) / 3;
-		double lz = l.z - (z1 + z2 + z3) / 3;
-		double lnorm = std::sqrt (lx*lx + ly*ly + lz*lz);
+		double lx = l.x;
+		double ly = l.y;
+		double lz = l.z;
+		double lnorm = std::sqrt (l.x * l.x + l.y * l.y + l.z * l.z);
 		lx /= lnorm, ly /= lnorm, lz /= lnorm;
 
 		// diffuse
-		double ct = std::max (0.0, lx * Nx + ly * Ny + lz * Nz);
-		
+		double cct = lx * Nx + ly * Ny + lz * Nz;
+		double ct = std::max (0.0, cct);
+
 		double cdr = kd_r * ct * l.c.red;
 		double cdg = kd_g * ct * l.c.green;
 		double cdb = kd_b * ct * l.c.blue;
-		
+
 		c_f.red   = (cdr < 255 - c_f.red   ? c_f.red   + cdr : 255);
 		c_f.green = (cdg < 255 - c_f.green ? c_f.green + cdg : 255);
 		c_f.blue  = (cdb < 255 - c_f.blue  ? c_f.blue  + cdb : 255);
 
 		// specular
-		double rfz = std::max(0.0, 2 * ct * Nz - lz);
-		rfz = rfz * rfz;
+		double rfz = std::max (0.0, 2 * ct * Nz - lz);
+		rfz = rfz * rfz * rfz;
 
 		cdr = ks_r * rfz * l.c.red;
 		cdg = ks_g * rfz * l.c.green;
@@ -171,7 +172,7 @@ color get_color (double x1, double y1, double z1,
 
 // Draws lines from a triangle list
 void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<std::vector<double>>& zbuffer,
-				 const color& ambient, std::vector<light>& lights, 
+				 const color& ambient, std::vector<light>& lights,
 				 double ka_r, double kd_r, double ks_r,
 				 double ka_g, double kd_g, double ks_g,
 				 double ka_b, double kd_b, double ks_b) {
@@ -183,7 +184,7 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 		double dx1 = x2 - x1, dx2 = x3 - x1,
 			   dy1 = y2 - y1, dy2 = y3 - y1;
 
-		if (dx1 * dy2 > dx2 * dy1 + 1) {
+		if (dx1 * dy2 > dx2 * dy1) {
 
 			// color calculation
 			color c_f = get_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);

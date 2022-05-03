@@ -13,14 +13,14 @@
 #include "parametric.hpp"
 
 void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, trianglelist& T, picture& S, std::vector<std::vector<double>>& zbuffer,
-				 const color& ambient, std::vector<light>& lights, 
+				 const color& ambient, std::vector<light>& lights,
 				 double ka_r, double kd_r, double ks_r,
 				 double ka_g, double kd_g, double ks_g,
 				 double ka_b, double kd_b, double ks_b) {
 	std::ifstream fin (filename);
 	std::cout << "Opened " << filename << "\n";
 
-	S.clear ();
+	// S.clear ();
 	std::string cmd;
 	while (fin >> cmd) {
 		if (cmd[0] == '#') {
