@@ -20,7 +20,7 @@ void parse_file (std::string filename, std::stack<matrix>& cstack, edgelist& E, 
 	std::ifstream fin (filename);
 	std::cout << "Opened " << filename << "\n";
 
-	// S.clear ();
+	S.clear ();
 	std::string cmd;
 	while (fin >> cmd) {
 		if (cmd[0] == '#') {

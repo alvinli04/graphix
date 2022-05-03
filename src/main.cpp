@@ -27,10 +27,13 @@ int main (int argc, char** argv) {
 	std::vector<light> lights; // vector with all point light sources
 
 	// temporary lighting stuff
-    for (int i = 0; i < N; ++i) for (int j = 0; j < N; ++j) S[i][j].set(WHITE);
+    // for (int i = 0; i < N; ++i) for (int j = 0; j < N; ++j) S[i][j].set(WHITE);
 	color ambient (50, 50, 50);
 	lights.push_back (light (.5, .75, 1, color (0, 255, 255)));
-	double ka_r = 0.1, ka_g = 0.1, ka_b = 0.1, kd_r = 0.5, kd_g = 0.5, kd_b = 0.5, ks_r = 0.5, ks_g = 0.5, ks_b = 0.5;
+    
+	double ka_r = 0.5, ka_g = 0.5, ka_b = 0.5,
+           kd_r = 0.5, kd_g = 0.5, kd_b = 0.5,
+           ks_r = 0.5, ks_g = 0.5, ks_b = 0.5;
 
 
 

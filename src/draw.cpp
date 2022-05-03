@@ -29,9 +29,9 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = B != 0 ? (z0 - z1) / (B + 1) : 0;
 
 		while (x <= x1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 10) / 10.0 >= zbuffer[y][x]) {
 				p[y][x].set(c);
-				zbuffer[y][x] = z;
+				zbuffer[y][x] = (int)(z * 10) / 10.0;
 			}
 			if (D > 0) {
 				D += 2 * B;
@@ -49,9 +49,9 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = A != 0 ? (z1 - z0) / (A + 1) : 0;
 
 		while (y <= y1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 10) / 10.0 >= zbuffer[y][x]) {
 				p[y][x].set(c);
-				zbuffer[y][x] = z;
+				zbuffer[y][x] = (int)(z * 10) / 10.0;
 			}
 			if (D < 0) {
 				D += 2 * A;
@@ -69,9 +69,9 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = B != 0 ? (z0 - z1) / (B + 1) : 0;
 
 		while (x <= x1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 10) / 10.0 >= zbuffer[y][x]) {
 				p[y][x].set(c);
-				zbuffer[y][x] = z;
+				zbuffer[y][x] = (int)(z * 10) / 10.0;
 			}
 			if (D < 0) {
 				D -= 2 * B;
@@ -89,9 +89,9 @@ void draw_line (int x0, int y0, double z0, int x1, int y1, double z1, picture& p
 		double dz = A != 0 ? (z1 - z0) / (A + 1) : 0;
 
 		while (y >= y1) {
-			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 1000) / 1000.0 > zbuffer[y][x]) {
+			if (0 <= y && y < p.height && 0 <= x && x < p.width && (int)(z * 10) / 10.0 >= zbuffer[y][x]) {
 				p[y][x].set(c);
-				zbuffer[y][x] = z;
+				zbuffer[y][x] = (int)(z * 10) / 10.0;
 			}
 			if (D > 0) {
 				D += 2 * A;
