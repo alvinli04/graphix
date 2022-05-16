@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "parser.h"
-#include "matrix.h"
+#include "parser.hpp"
+#include "matrix.hpp"
 
 #define YYERROR_VERBOSE 1
 
