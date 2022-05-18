@@ -26,3 +26,7 @@ clean:
 	rm -rf $(OBJ);
 	rm -rf $(BIN);
 	rm -rf $(IMG);
+
+test:
+	python3 src/compiler/script.py face.mdl
+
