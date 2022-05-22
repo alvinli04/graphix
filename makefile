@@ -11,7 +11,7 @@ BIN_FILES := $(BIN)/graphix
 
 # Making Executable And Running
 all: $(OBJ_FILES)
-	python3 src/compiler/script.py face.mdl
+	python3 src/compiler/script.py pic.mdl
 	mkdir -p $(BIN)
 	mkdir -p $(IMG)
 	g++ -std=c++17 -o $(BIN_FILES) $^

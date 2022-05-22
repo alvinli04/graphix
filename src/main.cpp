@@ -33,7 +33,8 @@ int main (int argc, char** argv) {
 
 	std::vector<light> lights; // vector with all point light sources
     color ambient (50, 50, 50); // ambient light
-    lights.push_back (light (.5, .75, 1, color (255, 255, 255)));
+    lights.push_back (light (-.5, 2, 1, color (255, 255, 255)));
+    lights.push_back (light (.5, -2, -1, color (0, 0, 100)));
 
     std::unordered_map<std::string, symbol> symtab;
 
