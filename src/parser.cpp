@@ -4,6 +4,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <stack>
+#include <map>
 
 #include "parser.hpp"
 #include "matrix.hpp"
