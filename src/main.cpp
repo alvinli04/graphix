@@ -104,7 +104,7 @@ int main (int argc, char** argv) {
     cmdin.seekg(0);
 
     while (cmdin >> cmd) {
-    	
+
         if (cmd != "vary") {
             //skip the line
             cmdin.ignore(512, '\n');
@@ -120,7 +120,7 @@ int main (int argc, char** argv) {
             }
             symtab[knob_name].val = sval;
         }
-        
+
     }
 
     /*
@@ -136,12 +136,20 @@ int main (int argc, char** argv) {
 
     // in any given frame, apply the transformation by the value * degree of knob value
     // call draw frame number of times, once for each frame (the below thing is draw)
-    
+
     for (int i = 0; i < frames; i++) {
 
     	// reset file stream
     	cmdin.clear();
     	cmdin.seekg(0);
+
+        // reset zbuffer, cstack
+        cstack = std::stack<matrix>();
+        matrix M(4,4);
+        ident(M);
+        cstack.push(M);
+        S.clear();
+        std::fill(zbuffer.begin(), zbuffer.end(), std::vector<double>(N, -std::numeric_limits<double>::infinity()));
 
 	    while (cmdin >> cmd) {
 	        if (cmd == "constants" || cmd == "frames" || cmd == "basename" || cmd == "vary" || cmd == "knob") {
@@ -159,9 +167,9 @@ int main (int argc, char** argv) {
 				cmdin >> x >> y >> z;
 	            cmdin >> knob;
 	            if (knob != "None") {
-	            	x *= frame_list[i][knob] - symtab[knob].val;
-	            	y *= frame_list[i][knob] - symtab[knob].val;
-	            	z *= frame_list[i][knob] - symtab[knob].val;
+	            	x *= frame_list[i][knob];
+	            	y *= frame_list[i][knob];
+	            	z *= frame_list[i][knob];
 	            }
 				cstack.top() *= move (x, y, z);
 	        } else if (cmd == "rotate") {
@@ -170,8 +178,7 @@ int main (int argc, char** argv) {
 	            cmdin >> axis >> theta;
 	            cmdin >> knob;
 	            if (knob != "None") {
-	            	theta *= frame_list[i][knob] - symtab[knob].val;
-	            	std::cout << knob << " " << frame_list[i][knob] - symtab[knob].val << "\n";
+	            	theta *= frame_list[i][knob];
 	            }
 	            if (axis == 'x') {
 	                cstack.top() *= rot_x (theta);
@@ -185,9 +192,9 @@ int main (int argc, char** argv) {
 	            cmdin >> x >> y >> z;
 	            cmdin >> knob;
 	            if (knob != "None") {
-	            	x *= frame_list[i][knob] - symtab[knob].val;
-	            	y *= frame_list[i][knob] - symtab[knob].val;
-	            	z *= frame_list[i][knob] - symtab[knob].val;
+	            	x *= frame_list[i][knob];
+	            	y *= frame_list[i][knob];
+	            	z *= frame_list[i][knob];
 	            }
 	            cstack.top() *= scale (x, y, z);
 	        } else if (cmd == "box") {
@@ -285,7 +292,7 @@ int main (int argc, char** argv) {
 				E *= cstack.top();
 				draw_lines (E, S, WHITE, zbuffer);
 				E.clear();
-	        } 
+	        }
 
 	        // save
 	        std::string num = std::to_string(i);
@@ -322,10 +329,10 @@ int main (int argc, char** argv) {
         	symtab[p.first].val = p.second;
         }
 	}
-	
 
-	// std::string conv = "convert " + basename + "* -delay 1.7 " + basename + ".gif";
-	// std::system (conv.c_str ());
+
+	std::string conv = "convert img/* -delay 1.7 img/" + basename + ".gif";
+	std::system (conv.c_str());
 
     symin.close();
    	cmdin.close();
