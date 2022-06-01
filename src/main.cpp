@@ -25,6 +25,8 @@ int main (int argc, char** argv) {
 	edgelist E; // Edgelist that holds all edges
 	trianglelist T; // Triangle list for 3D shapes
 	std::vector<std::vector<double>> zbuffer (N, std::vector<double> (N, -std::numeric_limits<double>::infinity()));
+    int frames = 1;
+    std::string basename = "frame";
 
 	matrix M (4,4); // Keeps track of all transformations
     ident (M);
@@ -64,6 +66,56 @@ int main (int argc, char** argv) {
    	// parse the command list
    	std::ifstream cmdin ("src/compiler/mdl.cmd");
     std::string cmd, none;
+    // pass 0
+    bool vary_h = 0, basename_h = 0, frames_h = 0;
+    while (cmdin >> cmd) {
+        if (cmd != "vary" && cmd != "frames" && cmd != "basename") {
+            //skip the line
+            cmdin.ignore(256, '\n');
+        } else if (cmd == "frames") {
+            cmdin >> frames;
+            frames_h = 1;
+        } else if (cmd == "basename") {
+            cmdin >> basename;
+            basename_h = 1;
+        } else if (cmd == "vary") {
+            vary_h = 1;
+        }
+    }
+
+    if (vary_h && !frames_h) {
+        std::cout << "Error: vary is present but the number of frames is not defined.\n";
+        return 0;
+    }
+    if (frames_h && !basename_h) {
+        std::cout << "Warning: basename is not present. Setting basename to \"frame\".";
+    }
+
+    // pass 1
+    std::vector<std::vector<std::pair<std::string, double>>> frame_list(frames);
+
+    // reset file stream
+    cmdin.clear();
+    cmdin.seekg(0);
+
+    while (cmdin >> cmd) {
+        if (cmd != "vary") {
+            //skip the line
+            cmdin.ignore(256, '\n');
+        } else {
+            std::string knob_name;
+            int sframe, eframe;
+            double sval, eval;
+            cmdin >> sframe >> eframe >> sval >> eval >> knob_name;
+            for (int i = sframe; i <= eframe; i++) {
+                frame_list[i].push_back(std::make_pair(knob_name, sval + (i - sframe) * (eval - sval) / (eframe - sframe)));
+            }
+        }
+    }
+
+    // pass 2
+    // in any given frame, apply the transformation by the value * degree of knob value
+    // call draw frame number of times, once for each frame (the below thing is draw)
     while (cmdin >> cmd) {
         if (cmd == "constants") {
 			//skip the line

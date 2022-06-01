@@ -17,6 +17,7 @@ def run(filename):
     cmd = open("src/compiler/mdl.cmd", "w")
 
     for k in symbols:
+        # sym.write(str(symbols[k]) + '\n')
         sym.write(symbols[k][0] + '\n')
         sym.write(k + '\n')
         if symbols[k][0] == 'constants':
@@ -28,8 +29,7 @@ def run(filename):
                 sym.write(str(i) + ' ')
             for i in d['blue']:
                 sym.write(str(i) + ' ')
-
-        sym.write('\n')
+            sym.write('\n')
 
     for command in commands:
         # cmd.write(str(command) + '\n')
