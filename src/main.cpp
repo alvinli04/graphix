@@ -122,7 +122,6 @@ int main (int argc, char** argv) {
         }
 
     }
-
     /*
     for(int i = 0; i < frames; i++){
     	std::cout << "frame " << i << "\n";
