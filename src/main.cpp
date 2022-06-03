@@ -328,6 +328,8 @@ int main (int argc, char** argv) {
         for (auto& p : frame_list[i]) {
         	symtab[p.first].val = p.second;
         }
+
+        std::printf("Created image %d of %d\n", i+1, frames);
 	}
 
 
