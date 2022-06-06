@@ -333,16 +333,19 @@ int main (int argc, char** argv) {
 	        */
 	        // std::cout << cmd << '\n';
 	    }
+
         // save
         std::string num = std::to_string(i);
         for (int j = 0; j < 3 - std::to_string(i).size(); j++)
             num = "0" + num;
-        std::string fname = "img/" + basename + num + ".png";
+        std::string fname = "img/" + basename + num;
         S.to_ppm (fname);
+        /*
         std::string fsave = "convert " + fname + ".ppm " + fname;
         std::system (fsave.c_str ());
         std::string fdel = "rm " + fname + ".ppm";
         std::system (fdel.c_str ());
+        */
 
 	    // update knob values in the symbol table
         for (auto& p : frame_list[i]) {
