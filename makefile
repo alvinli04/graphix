@@ -14,7 +14,7 @@ all: $(OBJ_FILES)
 	python3 src/compiler/script.py pic.mdl
 	mkdir -p $(BIN)
 	mkdir -p $(IMG)
-	g++ -std=c++17 -o $(BIN_FILES) $^
+	g++ -std=c++17 -pthread -o $(BIN_FILES) $^
 	$(BIN_FILES)
 
 # Making Object Files
@@ -30,6 +30,7 @@ clean:
 	rm src/compiler/mdl.sym;
 	rm src/compiler/mdl.cmd;
 	rm -rf src/compiler/__pycache__
+	rm -rf src/compiler/ply/__pycache__
 	rm src/compiler/*out src/compiler/parsetab.py
 
 test:
