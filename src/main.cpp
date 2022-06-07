@@ -261,8 +261,8 @@ int main (int argc, char** argv) {
 
    	// parse the command list
    	std::ifstream cmdin ("src/compiler/mdl.cmd");
-    
-    
+
+
     while (cmdin >> cmd) {
         if (std::isdigit(cmd[0]) || cmd[0] == '-'){
             cmdlist.push_back(command(stod(cmd)));
@@ -312,8 +312,6 @@ int main (int argc, char** argv) {
             std::string knob_name = std::get<std::string>(cmdlist[cnt + 5]);
             double sframe = std::get<double>(cmdlist[cnt + 1]), eframe = std::get<double>(cmdlist[cnt + 2]);
             double sval = std::get<double>(cmdlist[cnt + 3]), eval = std::get<double>(cmdlist[cnt + 4]);
-            // std::printf("%f, %f, %f, %f ", sframe, eframe, sval, eval);
-            // std::cout << knob_name << "]\n";
             for (int i = (int)sframe; i <= (int)eframe; i++) {
                 frame_list[i][knob_name] = sval + (i - (int)sframe) * (eval - sval) / ((int)eframe - (int)sframe);
             }
@@ -334,9 +332,12 @@ int main (int argc, char** argv) {
 	}
 	for (auto &th : threads) th.join();
 
-
-	std::string conv = "convert img/* -delay 1.7 img/" + basename + ".gif";
-	std::system (conv.c_str());
+    if (frames == 1) {
+        std::system(("convert * " + basename + ".png").c_str());
+    } else {
+	    std::string conv = "convert img/* -delay 1.7 img/" + basename + ".gif";
+	    std::system (conv.c_str());
+    }
 
     symin.close();
    	cmdin.close();
