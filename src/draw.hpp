@@ -11,7 +11,15 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
                  double ka_g, double kd_g, double ks_g,
                  double ka_b, double kd_b, double ks_b);
 
-color get_color (double x1, double y1, double z1,
+color get_phong_color (double x1, double y1, double z1,
+                 double x2, double y2, double z2,
+                 double x3, double y3, double z3,
+                 const color& ambient, std::vector<light>& lights,
+                 double ka_r, double kd_r, double ks_r,
+                 double ka_g, double kd_g, double ks_g,
+                 double ka_b, double kd_b, double ks_b);
+
+color get_cel_color (double x1, double y1, double z1,
                  double x2, double y2, double z2,
                  double x3, double y3, double z3,
                  const color& ambient, std::vector<light>& lights,

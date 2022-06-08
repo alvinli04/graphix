@@ -113,8 +113,8 @@ void draw_lines (edgelist& points, picture& p, const color& c, std::vector<std::
 	}
 }
 
-// Get color
-color get_color (double x1, double y1, double z1,
+// Get color based on the phong reflection model
+color get_phong_color (double x1, double y1, double z1,
 				 double x2, double y2, double z2,
 				 double x3, double y3, double z3,
 				 const color& ambient, std::vector<light>& lights,
@@ -170,6 +170,74 @@ color get_color (double x1, double y1, double z1,
 	return c_f;
 }
 
+// Get color based a cel shading model
+// FIXME: Figue out why this is so dim
+color get_cel_color (double x1, double y1, double z1,
+				 double x2, double y2, double z2,
+				 double x3, double y3, double z3,
+				 const color& ambient, std::vector<light>& lights,
+				 double ka_r, double kd_r, double ks_r,
+				 double ka_g, double kd_g, double ks_g,
+				 double ka_b, double kd_b, double ks_b) {
+	// Get the normal
+	double ax = x2 - x1, ay = y2 - y1, az = z2 - z1;
+	double bx = x3 - x1, by = y3 - y1, bz = z3 - z1;
+	double Nx = ay * bz - az * by;
+	double Ny = az * bx - ax * bz;
+	double Nz = ax * by - ay * bx;
+	double Nnorm = std::sqrt (Nx * Nx + Ny * Ny + Nz * Nz);
+	// normalize
+	Nx /= Nnorm, Ny /= Nnorm, Nz /= Nnorm;
+
+	// ambient light
+	color c_f (ka_r * ambient.red, ka_g * ambient.green, ka_b * ambient.blue);
+
+	for (light& l : lights) {
+		// get L vector
+		double lx = l.x;
+		double ly = l.y;
+		double lz = l.z;
+		double lnorm = std::sqrt (l.x * l.x + l.y * l.y + l.z * l.z);
+		lx /= lnorm, ly /= lnorm, lz /= lnorm;
+
+		// diffuse
+		double cct = lx * Nx + ly * Ny + lz * Nz;
+		double ct = std::max (0.0, cct);
+
+        // cases for the different possible threshholds
+        // please adjust the constants as desired
+        double diffuse_mult;
+        if (ct > 0.95) {
+            diffuse_mult = 1.0;
+        } else if (ct > 0.5) {
+            diffuse_mult = 0.95;
+        } else if (ct > 0.25) {
+            diffuse_mult = 0.5;
+        } else {
+            diffuse_mult = 0.0;
+        }
+
+		double cdr = kd_r * diffuse_mult * l.c.red;
+		double cdg = kd_g * diffuse_mult * l.c.green;
+		double cdb = kd_b * diffuse_mult * l.c.blue;
+
+		c_f.red   = (cdr < 255 - c_f.red   ? c_f.red   + cdr : 255);
+		c_f.green = (cdg < 255 - c_f.green ? c_f.green + cdg : 255);
+		c_f.blue  = (cdb < 255 - c_f.blue  ? c_f.blue  + cdb : 255);
+
+		// specular
+		double rfz = std::max (0.0, 2 * ct * Nz - lz);
+		rfz = rfz * rfz * rfz;
+        if (rfz >= 0.5) {
+            c_f.red = 255;
+            c_f.green = 255;
+            c_f.blue = 255;
+        }
+	}
+
+	return c_f;
+}
+
 // Draws lines from a triangle list
 void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<std::vector<double>>& zbuffer,
 				 const color& ambient, std::vector<light>& lights,
@@ -187,7 +255,7 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 		if (dx1 * dy2 > dx2 * dy1) {
 
 			// color calculation
-			color c_f = get_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
+			color c_f = get_cel_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
 
 			// scanline conversion
 			if (y1 < y2) {
