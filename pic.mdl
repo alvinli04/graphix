@@ -1,39 +1,6 @@
-basename coins
-frames 60
-constants gold 0.3 0.3 0.8 0.275 0.275 0.7 0.1 0.1 0.2
-
+basename teapot
+constants shiny_purple 0.3 0.2 0.8 0.3 0 0 0.3 0.2 0.8
 push
 move 250 250 0
-
-push
-move 125 125 0
-rotate y 180 c1
-rotate x 90
-torus gold 0 0 0 30 50
-pop
-
-push
-move -125 125 0
-rotate y 180 c2
-rotate x 90
-torus gold 0 0 0 30 50
-pop
-
-push
-move 125 -125 0
-rotate y 180 c3
-rotate x 90
-torus gold 0 0 0 30 50
-pop
-
-push
-move -125 -125 0
-rotate y 180 c4
-rotate x 90
-torus gold 0 0 0 30 50
-pop
-
-vary c1 0 59 0 1
-vary c2 0 59 0 2
-vary c3 0 59 0 3
-vary c4 0 59 0 4
+scale 50 50 50
+mesh shiny_purple :teapot.obj

@@ -211,7 +211,53 @@ void pass2 (int i) {
 			E *= cstack.top();
 			draw_lines (E, S, WHITE, zbuffer);
 			E.clear();
+        } else if (cmd == "mesh") {
+            std::string mesh_name = std::get<std::string>(cmdlist[cnt + 1]);
+            cnt += 3;
+            std::string constants = std::get<std::string>(cmdlist[cnt]);
+
+            std::ifstream meshin (mesh_name);
+            std::vector<std::vector<double>> vertices;
+            std::vector<std::vector<int>> faces;
+            std::string mesh_cmd;
+            while (meshin >> mesh_cmd) {
+                if (mesh_cmd == "v") {
+                    double x, y, z;
+                    meshin >> x >> y >> z;
+                    vertices.push_back({x, y, z});
+                } else if (mesh_cmd == "f") {
+                    int a, b, c;
+                    meshin >> a >> b >> c;
+                    faces.push_back({a, b, c});
+                }
+            }
+            meshin.close();
+
+            mesh (vertices, faces, T);
+            T *= cstack.top();
+
+            // get lighting
+            double ka_r = .5, kd_r = .5, ks_r = .5,
+                   ka_g = .5, kd_g = .5, ks_g = .5,
+                   ka_b = .5, kd_b = .5, ks_b = .5;
+
+            if (constants != "None") {
+                std::array<std::array<double, 3>, 3> curr = symtab[constants].c;
+                ka_r = curr[0][0];
+                kd_r = curr[0][1];
+                ks_r = curr[0][2];
+                ka_g = curr[1][0];
+                kd_g = curr[1][1];
+                ks_g = curr[1][2];
+                ka_b = curr[2][0];
+                kd_b = curr[2][1];
+                ks_b = curr[2][2];
+            }
+
+            draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+            T.clear();
         }
+
         ++cnt;
     }
 
@@ -223,9 +269,12 @@ void pass2 (int i) {
     S.to_ppm (fname);
 
     // update knob values in the symbol table
-    for (auto& p : frame_list[i]) {
-    	symtab[p.first].val = p.second;
+    if (frames > 1){
+        for (auto& p : frame_list[i]) {
+        	symtab[p.first].val = p.second;
+        }
     }
+
 }
 
 
@@ -326,14 +375,16 @@ int main (int argc, char** argv) {
     // in any given frame, apply the transformation by the value * degree of knob value
     // call draw frame number of times, once for each frame (the below thing is draw)
     std::vector<std::thread> threads;
+    
     for (int i = 0; i < frames; i++) {
     	threads.push_back(std::thread(pass2, i));
     	//pass2(i);
 	}
-	for (auto &th : threads) th.join();
-
+    for (auto &th : threads) th.join();
+    
     if (frames == 1) {
-        std::system(("convert * " + basename + ".png").c_str());
+        std::string conv = "convert img/* img/" + basename + ".png";
+        std::system(conv.c_str());
     } else {
 	    std::string conv = "convert img/* -delay 1.7 img/" + basename + ".gif";
 	    std::system (conv.c_str());
