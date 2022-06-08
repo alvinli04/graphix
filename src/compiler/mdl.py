@@ -410,3 +410,4 @@ def parseFile(filename):
         return result
     except IOError:
         return ()
+
