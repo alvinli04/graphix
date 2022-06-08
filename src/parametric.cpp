@@ -212,3 +212,14 @@ void torus (double x, double y, double z, double r1, double r2, trianglelist& T)
 		}
 	}
 }
+
+// draws a mesh from a list of vertices and faces
+void mesh (std::vector<std::vector<double>>& vertices, std::vector<std::vector<int>>& faces, trianglelist& T) {
+	for (auto& v : faces) {
+		T.add_triangle (
+			vertices[v[0] - 1][0], vertices[v[0] - 1][1], vertices[v[0] - 1][2],
+			vertices[v[1] - 1][0], vertices[v[1] - 1][1], vertices[v[1] - 1][2],
+			vertices[v[2] - 1][0], vertices[v[2] - 1][1], vertices[v[2] - 1][2]
+		);
+	}
+}

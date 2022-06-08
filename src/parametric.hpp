@@ -1,4 +1,5 @@
 #include "matrix.hpp"
+#include <vector>
 
 const matrix H (
 	std::vector<std::vector<double>>
@@ -26,3 +27,4 @@ void bezier (double x0, double y0, double x1, double y1, double x2, double y2, d
 void box (double x, double y, double z, double width, double height, double depth, trianglelist& T);
 void sphere (double x, double y, double z, double r, trianglelist& T);
 void torus (double x, double y, double z, double r1, double r2, trianglelist& T);
+void mesh (std::vector<std::vector<double>>& vertices, std::vector<std::vector<int>>& faces, trianglelist& T);

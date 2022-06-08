@@ -34,4 +34,4 @@ clean:
 	rm src/compiler/*out src/compiler/parsetab.py
 
 test:
-	python3 src/compiler/script.py test.mdl
+	python3 src/compiler/script.py pic.mdl
