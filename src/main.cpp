@@ -256,7 +256,9 @@ void pass2 (int i) {
 
             draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
             T.clear();
-        }
+		} else if (cmd == "ambient") {
+			cnt += 3;
+		}
 
         ++cnt;
     }
