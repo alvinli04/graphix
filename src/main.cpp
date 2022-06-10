@@ -257,6 +257,10 @@ void pass2 (int i) {
             draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
             T.clear();
 		} else if (cmd == "ambient") {
+			int r = std::get<double>(cmdlist[cnt + 1]);
+			int g = std::get<double>(cmdlist[cnt + 2]);
+			int b = std::get<double>(cmdlist[cnt + 3]);
+			ambient = color (r, g, b);
 			cnt += 3;
 		}
 
