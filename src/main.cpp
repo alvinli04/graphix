@@ -34,6 +34,7 @@ std::vector<light> lights; // vector of lights
 std::vector<command> cmdlist; // list of commands
 std::unordered_map<std::string, symbol> symtab; // symbol table
 color ambient (50, 50, 50); // ambient lighting
+shadingmode shading_mode = PHONG; //shading mode (currently phong or cel)
 
 int num_cmd; // number of commands
 int frames = 1; // number of frames
@@ -133,7 +134,7 @@ void pass2 (int i) {
                 ks_b = curr[2][2];
             }
 
-			draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+			draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
 			T.clear();
         } else if (cmd == "sphere") {
             std::string constants = std::get<std::string>(cmdlist[cnt + 1]);
@@ -164,7 +165,7 @@ void pass2 (int i) {
                 ks_b = curr[2][2];
             }
 
-			draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+			draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
 			T.clear();
         } else if (cmd == "torus") {
             std::string constants = std::get<std::string>(cmdlist[cnt + 1]);
@@ -196,7 +197,7 @@ void pass2 (int i) {
                 ks_b = curr[2][2];
             }
 
-			draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+			draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
 			T.clear();
         } else if (cmd == "line") {
             ++cnt;
@@ -254,7 +255,7 @@ void pass2 (int i) {
                 ks_b = curr[2][2];
             }
 
-            draw_lines (T, S, WHITE, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+            draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
             T.clear();
 		} else if (cmd == "ambient") {
 			int r = std::get<double>(cmdlist[cnt + 1]);
@@ -262,7 +263,18 @@ void pass2 (int i) {
 			int b = std::get<double>(cmdlist[cnt + 3]);
 			ambient = color (r, g, b);
 			cnt += 3;
-		}
+		} else if (cmd == "illumination") {
+            std::get<std::string>(cmdlist[++cnt]);
+            std::string illumination_type = std::get<std::string>(cmdlist[++cnt]);
+            if (illumination_type == "cel_illumination") {
+                shading_mode = CEL;
+            } else if (illumination_type == "phong_illumination") {
+                shading_mode = PHONG;
+            } else {
+                std::cerr << "unrecognized shading mode, ignoring command" << std::endl;
+            }
+        }
+
 
         ++cnt;
     }
