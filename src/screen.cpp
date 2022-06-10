@@ -55,6 +55,11 @@ light::light (double x, double y, double z, const color& c) {
 	this->c = c;
 }
 
+// prints a light
+std::ostream& operator<<(std::ostream& os, light const& l){
+	return (os << +l.x << " " << +l.y << " " << +l.z << " " << l.c);
+}
+
 
 //Picture functions
 // ------------------------------

@@ -32,8 +32,11 @@ def run(filename):
             sym.write('\n')
         elif symbols[k][0] == 'light':
             d = symbols[k][1]
-            sym.write(str(d['location'])[1:-1] + '\n')
-            sym.write(str(d['color'])[1:-1] + '\n')
+            for i in d['location']:
+                sym.write(str(i) + ' ')
+            for i in d['color']:
+                sym.write(str(i) + ' ')
+            sym.write('\n')
 
     for command in commands:
         # cmd.write(str(command) + '\n')

@@ -31,6 +31,8 @@ public:
 
     light (double x, double y, double z, const color& c);
 
+    friend std::ostream& operator<<(std::ostream& os, light const& l);
+
 };
 
 class picture {
