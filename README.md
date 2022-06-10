@@ -8,7 +8,7 @@
 - [ ] Multiple lights
 - [ ] Gouraud and Phong Shading
 - [x] Meshes
-- [ ] Cel Shading
+- [x] Cel Shading
 
 ---
 ## The Details:

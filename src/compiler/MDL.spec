@@ -113,6 +113,9 @@ constants name kar kdr ksr kag kdg ksg kab kdb ksb [r] [g] [b]
 shading wireframe|flat|gouraud|phong|raytrace
 			- set the shading mode
 
+illumination cel|phong
+            - set the illumination mode
+
 
 MISC
 ----

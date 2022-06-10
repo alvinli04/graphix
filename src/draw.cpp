@@ -239,7 +239,7 @@ color get_cel_color (double x1, double y1, double z1,
 }
 
 // Draws lines from a triangle list
-void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<std::vector<double>>& zbuffer,
+void draw_lines (trianglelist& points, picture& p, const color& c, shadingmode shading_mode, std::vector<std::vector<double>>& zbuffer,
 				 const color& ambient, std::vector<light>& lights,
 				 double ka_r, double kd_r, double ks_r,
 				 double ka_g, double kd_g, double ks_g,
@@ -255,7 +255,19 @@ void draw_lines (trianglelist& points, picture& p, const color& c, std::vector<s
 		if (dx1 * dy2 > dx2 * dy1) {
 
 			// color calculation
-			color c_f = get_cel_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
+            color c_f; 
+            switch (shading_mode) {
+                case CEL:
+                    c_f = get_cel_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
+                    break;
+                case PHONG:
+                    c_f = get_phong_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
+                    break;
+                default:
+                    std::cerr << "unrecognized shading enum, this is a problem in draw.cpp or main.cpp and is a bad thing, please fix me" << std::endl;
+                    c_f = get_phong_color (x1, y1, z1, x2, y2, z2, x3, y3, z3, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g,ka_b, kd_b, ks_b);
+                    break;
+            }
 
 			// scanline conversion
 			if (y1 < y2) {

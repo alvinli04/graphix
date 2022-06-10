@@ -1,3 +1,4 @@
+illumination phong_illumination
 basename teapot
 constants shiny_purple 0.3 0.2 0.8 0.3 0 0 0.3 0.2 0.8
 push

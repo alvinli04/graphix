@@ -32,6 +32,8 @@ tokens = (
     "GENERATE_RAYFILES",
     "SHADING",
     "SHADING_TYPE",
+    "ILLUMINATION",
+    "ILLUMINATION_TYPE",
     "SET_KNOBS",
     "FOCAL",
     "DISPLAY",
@@ -75,6 +77,9 @@ reserved = {
     "gouraud" : "SHADING_TYPE",
     "raytrace" : "SHADING_TYPE",
     "wireframe" : "SHADING_TYPE",
+    "illumination" : "ILLUMINATION",
+    "cel_illumination" : "ILLUMINATION_TYPE",
+    "phong_illumination" : "ILLUMINATION_TYPE",
     "setknobs" : "SET_KNOBS",
     "focal" : "FOCAL",
     "display" : "DISPLAY",
@@ -320,11 +325,15 @@ def p_command_shading(p):
     cmd = {'op':p[1], 'args' : None, 'shade_type' : p[2] }
     commands.append(cmd)
 
+def p_command_illumination(p):
+    "command : ILLUMINATION ILLUMINATION_TYPE"
+    cmd = {'op':p[1], 'args' : None, 'illumination_type' : p[2] }
+    commands.append(cmd)
+
 def p_command_camera(p):
     "command : CAMERA NUMBER NUMBER NUMBER NUMBER NUMBER NUMBER"
     symbols['camera'] = ['camera', {'eye': p[2:4], 'aim': p[4:]} ]
     commands.append({'op':p[1], 'args':None})
-
 def p_command_generate_rayfiles(p):
     "command : GENERATE_RAYFILES"
     commands.append({'op':p[1], 'args':None})
