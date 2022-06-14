@@ -18,9 +18,9 @@ def run(filename):
 
     for k in symbols:
         # sym.write(str(symbols[k]) + '\n')
+        sym.write(symbols[k][0] + '\n')
+        sym.write(k + '\n')
         if symbols[k][0] == 'constants':
-            sym.write(symbols[k][0] + '\n')
-            sym.write(k + '\n')
             d = symbols[k][1]
             # sym.write(str(d))
             for i in d['red']:
