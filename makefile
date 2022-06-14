@@ -4,6 +4,9 @@ OBJ := ./obj
 BIN := ./bin
 IMG := ./img
 
+# Flags
+CPP_FLAGS := -Wall -Wextra
+
 # Files
 SRC_FILES := $(wildcard $(SRC)/*.cpp)
 OBJ_FILES := $(patsubst $(SRC)/%.cpp, $(OBJ)/%.o, $(SRC_FILES))
@@ -14,13 +17,13 @@ all: $(OBJ_FILES)
 	python3 src/compiler/script.py pic.mdl
 	mkdir -p $(BIN)
 	mkdir -p $(IMG)
-	g++ -std=c++17 -pthread -o $(BIN_FILES) $^
+	g++ $(CPP_FLAGS) -std=c++17 -pthread -o $(BIN_FILES) $^
 	$(BIN_FILES)
 
 # Making Object Files
 $(OBJ)/%.o: $(SRC)/%.cpp
 	mkdir -p $(OBJ)
-	g++ -std=c++17 -o $@ -c $<
+	g++ $(CPP_FLAGS) -std=c++17 -o $@ -c $<
 
 # Cleaning Files
 clean:

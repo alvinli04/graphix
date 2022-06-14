@@ -2,8 +2,7 @@
 #include <ostream>
 #include <fstream>
 #include <iostream>
-#include <cassert>
-#include <cmath>
+#include <cassert> #include <cmath>
 
 #include "matrix.hpp"
 
@@ -229,6 +228,40 @@ void trianglelist::add_triangle (double x0, double y0, double z0, double x1, dou
 	add_point (x0, y0, z0);
 	add_point (x1, y1, z1);
 	add_point (x2, y2, z2);
+
+    point p0 = point { x0, y0, z0 };
+    point p1 = point { x1, y1, z1 };
+    point p2 = point { x2, y2, z2 };
+    
+    double ax = x0 - x1, ay = y0 - y1, az = z0 - z1;
+    double bx = x0 - x2, by = y0 - y2, bz = z0 - z2;
+    point norm = { 0, 0, 0 };
+    norm.x += ay * bz - az * by;
+    norm.y += az * bx - ax * bz;
+    norm.z += ax * by - ay * bx;
+
+    double mag = sqrt(norm.x * norm.x + norm.y * norm.y + norm.z * norm.z);
+    norm.x /= mag, norm.y /= mag, norm.z /= mag;
+
+    for (auto p : {p0, p1, p2}) {
+        vertex_normals[p].x += norm.x;
+        vertex_normals[p].y += norm.y;
+        vertex_normals[p].z += norm.z;
+    }
+
+    /*
+    std::cerr << "new thing!!!" << std::endl;
+    for (auto i = vertex_normals.begin(); i != vertex_normals.end(); i++) {
+        std::cerr << "thing: " << i->second.x << " " << i->second.y << " " << i->second.z << std::endl;
+    }
+    */
+}
+
+point trianglelist::get_vertex_normal(double px, double py, double pz) {
+    point norm = vertex_normals[point { px, py, pz} ];
+    double mag = sqrt(norm.x * norm.x + norm.y * norm.y + norm.z * norm.z);
+    norm.x /= mag, norm.y /= mag, norm.z /= mag;
+    return norm;
 }
 
 // Multiplication
