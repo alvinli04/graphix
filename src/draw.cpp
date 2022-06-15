@@ -280,7 +280,7 @@ color get_cel_color (double x1, double y1, double z1,
 		// specular
 		double rfz = std::max (0.0, 2 * ct * Nz - lz);
 		rfz = rfz * rfz * rfz;
-        if (rfz >= 0.5) {
+        if (rfz >= 0.8) {
             c_f.red = 255;
             c_f.green = 255;
             c_f.blue = 255;
@@ -340,7 +340,7 @@ color get_cel_color_from_norm (double Nx, double Ny, double Nz,
 		// specular
 		double rfz = std::max (0.0, 2 * ct * Nz - lz);
 		rfz = rfz * rfz * rfz;
-        if (rfz >= 0.5) {
+        if (rfz >= 0.8) {
             c_f.red = 255;
             c_f.green = 255;
             c_f.blue = 255;
