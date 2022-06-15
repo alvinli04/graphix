@@ -6,7 +6,7 @@
 ---
 ## New Features:
 - [x] Multiple lights
-- [ ] Gouraud and Phong Shading
+- [x] Gouraud and Phong Shading
 - [x] Meshes
 - [x] Cel Shading
 
