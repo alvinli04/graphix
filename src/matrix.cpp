@@ -2,7 +2,8 @@
 #include <ostream>
 #include <fstream>
 #include <iostream>
-#include <cassert> #include <cmath>
+#include <cassert>
+#include <cmath>
 
 #include "matrix.hpp"
 
@@ -34,7 +35,7 @@ void matrix::clear () {
 }
 
 // Accessor
-std::vector<double>& matrix::operator[](int index) {
+std::vector<double>& matrix::operator[](size_t index) {
 	assert (index < V.size());
 	return V[index];
 }
@@ -74,14 +75,6 @@ matrix& matrix::operator*=(const matrix& m) {
 
 matrix operator*(matrix a, const matrix& b) {
 	return a *= b;
-}
-
-// Set a matrix equal to another matrix
-matrix& matrix::operator=(const matrix& m) {
-	this->V = m.V;
-	this->rows = m.rows;
-	this->cols = m.cols;
-	return *this;
 }
 
 // Turns a matrix into the identity matrix
@@ -232,7 +225,7 @@ void trianglelist::add_triangle (double x0, double y0, double z0, double x1, dou
     point p0 = point { x0, y0, z0 };
     point p1 = point { x1, y1, z1 };
     point p2 = point { x2, y2, z2 };
-    
+
     double ax = x0 - x1, ay = y0 - y1, az = z0 - z1;
     double bx = x0 - x2, by = y0 - y2, bz = z0 - z2;
     point norm = { 0, 0, 0 };
@@ -249,12 +242,12 @@ void trianglelist::add_triangle (double x0, double y0, double z0, double x1, dou
         vertex_normals[p].z += norm.z;
     }
 
-    /*
-    std::cerr << "new thing!!!" << std::endl;
-    for (auto i = vertex_normals.begin(); i != vertex_normals.end(); i++) {
-        std::cerr << "thing: " << i->second.x << " " << i->second.y << " " << i->second.z << std::endl;
-    }
-    */
+
+    // std::cerr << "new thing!!!" << std::endl;
+    // for (auto i = vertex_normals.begin(); i != vertex_normals.end(); i++) {
+    //     std::cerr << "thing: " << i->first.x << " " << i->first.y << " " << i->first.z << std::endl;
+    // }
+
 }
 
 point trianglelist::get_vertex_normal(double px, double py, double pz) {
@@ -270,6 +263,35 @@ trianglelist& trianglelist::operator*=(const matrix& m) {
 	this->V = res.V;
 	this->rows = res.rows;
 	this->cols = res.cols;
+
+	// recalculate normals
+	vertex_normals.clear();
+	for (int i = 0; i < cols; i += 3) {
+		double x0 = V[0][i], x1 = V[0][i+1], x2 = V[0][i+2],
+			   y0 = V[1][i], y1 = V[1][i+1], y2 = V[1][i+2],
+			   z0 = V[2][i], z1 = V[2][i+1], z2 = V[2][i+2];
+
+		point p0 = point { x0, y0, z0 };
+	    point p1 = point { x1, y1, z1 };
+	    point p2 = point { x2, y2, z2 };
+
+	    double ax = x0 - x1, ay = y0 - y1, az = z0 - z1;
+	    double bx = x0 - x2, by = y0 - y2, bz = z0 - z2;
+	    point norm = { 0, 0, 0 };
+	    norm.x += ay * bz - az * by;
+	    norm.y += az * bx - ax * bz;
+	    norm.z += ax * by - ay * bx;
+
+	    double mag = sqrt(norm.x * norm.x + norm.y * norm.y + norm.z * norm.z);
+	    norm.x /= mag, norm.y /= mag, norm.z /= mag;
+
+	    for (auto p : {p0, p1, p2}) {
+	        vertex_normals[p].x += norm.x;
+	        vertex_normals[p].y += norm.y;
+	        vertex_normals[p].z += norm.z;
+	    }
+	}
+
 	return *this;
 }
 
@@ -279,4 +301,3 @@ void trianglelist::clear () {
 	this->rows = 4;
 	this->cols = 0;
 }
-

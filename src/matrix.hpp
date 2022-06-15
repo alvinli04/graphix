@@ -19,10 +19,9 @@ public:
 
 	void clear ();
 
-	std::vector<double>& operator[](int index);
+	std::vector<double>& operator[](size_t index);
 	friend std::ostream& operator<<(std::ostream& os, matrix const& m);
 	matrix& operator*=(const matrix& m);
-	matrix& operator=(const matrix& m);
 	friend matrix operator*(matrix a, const matrix& b);
 
 };
@@ -48,9 +47,27 @@ public:
 
 struct point {
     double x, y, z;
+
+	point& operator+=(const point& b) {
+		x += b.x;
+		y += b.y;
+		z += b.z;
+		return *this;
+	}
+	point& operator-=(const point& b)  {
+		x -= b.x;
+		y -= b.y;
+		z -= b.z;
+		return *this;
+	}
+	friend point operator+(point a, const point& b) {return a += b;}
+	friend point operator-(point a, const point& b) {return a -= b;}
+	friend point operator*(double a, point b) {return point{a * b.x, a * b.y, a * b.z};}
+	friend point operator/(point b, double a) {return point{b.x / a, b.y / a, b.z / a};}
 };
 
-//for the below I know double are rarely equal but this program is a case where 
+
+//for the below I know double are rarely equal but this program is a case where
 //there actually might be a fair few doubles which are super equal
 //if there are problems though this is a point to rethink and I will put FIXME
 //point hash function

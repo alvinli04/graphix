@@ -34,7 +34,8 @@ std::vector<light> lights; // vector of lights
 std::vector<command> cmdlist; // list of commands
 std::unordered_map<std::string, symbol> symtab; // symbol table
 color ambient (50, 50, 50); // ambient lighting
-shadingmode shading_mode = PHONG; //shading mode (currently phong or cel)
+illuminationmode illumination_mode = PHONG; //shading mode (currently phong or cel)
+shadingmode shading_mode = FLAT_SHADING;
 
 int num_cmd; // number of commands
 int frames = 1; // number of frames
@@ -134,7 +135,17 @@ void pass2 (int i) {
                 ks_b = curr[2][2];
             }
 
-			draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+            switch (shading_mode) {
+                case FLAT_SHADING:
+                    draw_lines_flat (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case GOURAUD_SHADING:
+                    draw_lines_gouraud (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case PHONG_SHADING:
+                    phong_draw_lines (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+            }
 			T.clear();
         } else if (cmd == "sphere") {
             std::string constants = std::get<std::string>(cmdlist[cnt + 1]);
@@ -164,8 +175,18 @@ void pass2 (int i) {
                 kd_b = curr[2][1];
                 ks_b = curr[2][2];
             }
-
-			draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+          
+            switch (shading_mode) {
+                case FLAT_SHADING:
+                    draw_lines_flat (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case GOURAUD_SHADING:
+                    draw_lines_gouraud (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case PHONG_SHADING:
+                    phong_draw_lines (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+            }
 			T.clear();
         } else if (cmd == "torus") {
             std::string constants = std::get<std::string>(cmdlist[cnt + 1]);
@@ -197,7 +218,17 @@ void pass2 (int i) {
                 ks_b = curr[2][2];
             }
 
-			draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+            switch (shading_mode) {
+                case FLAT_SHADING:
+                    draw_lines_flat (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case GOURAUD_SHADING:
+                    draw_lines_gouraud (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case PHONG_SHADING:
+                    phong_draw_lines (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+            }
 			T.clear();
         } else if (cmd == "line") {
             ++cnt;
@@ -255,7 +286,17 @@ void pass2 (int i) {
                 ks_b = curr[2][2];
             }
 
-            draw_lines (T, S, WHITE, shading_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+            switch (shading_mode) {
+                case FLAT_SHADING:
+                    draw_lines_flat (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case GOURAUD_SHADING:
+                    draw_lines_gouraud (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+                case PHONG_SHADING:
+                    phong_draw_lines (T, S, illumination_mode, zbuffer, ambient, lights, ka_r, kd_r, ks_r, ka_g, kd_g, ks_g, ka_b, kd_b, ks_b);
+                    break;
+            }
             T.clear();
 		} else if (cmd == "ambient") {
 			int r = std::get<double>(cmdlist[cnt + 1]);
@@ -267,11 +308,21 @@ void pass2 (int i) {
             std::get<std::string>(cmdlist[++cnt]);
             std::string illumination_type = std::get<std::string>(cmdlist[++cnt]);
             if (illumination_type == "cel_illumination") {
-                shading_mode = CEL;
+                illumination_mode = CEL;
             } else if (illumination_type == "phong_illumination") {
-                shading_mode = PHONG;
+                illumination_mode = PHONG;
             } else {
                 std::cerr << "unrecognized shading mode, ignoring command" << std::endl;
+            }
+        } else if (cmd == "shading") {
+            std::get<std::string>(cmdlist[++cnt]);
+            std::string shading_type = std::get<std::string>(cmdlist[++cnt]);
+            if (shading_type == "flat") {
+                shading_mode = FLAT_SHADING;
+            } else if (shading_type == "gouraud") {
+                shading_mode = GOURAUD_SHADING;
+            } else if (shading_type == "phong") {
+                shading_mode = PHONG_SHADING;
             }
         }
 
@@ -281,7 +332,7 @@ void pass2 (int i) {
 
     // save
     std::string num = std::to_string(i);
-    for (int j = 0; j < 3 - std::to_string(i).size(); j++)
+    for (size_t j = 0; j < 3 - std::to_string(i).size(); j++)
         num = "0" + num;
     std::string fname = "img/" + basename + num;
     S.to_ppm (fname);
@@ -297,7 +348,7 @@ void pass2 (int i) {
 
 
 
-int main (int argc, char** argv) {
+int main () {
 	std::string cmd, knob; // strings used in reading in the command list
     // lights.push_back (light (-.5, 2, 1, color (255, 255, 255)));
 
@@ -325,10 +376,11 @@ int main (int argc, char** argv) {
 			double r, g, b;
 			double x, y, z;
 			symin >> r >> g >> b >> x >> y >> z;
-			lights.push_back(light(x, y, z, color((int)r, (int)g, (int)b)));	
-		}	
+			lights.push_back(light(x, y, z, color((int)r, (int)g, (int)b)));
+		}
     }
-    
+
+
    	// parse the command list
    	std::ifstream cmdin ("src/compiler/mdl.cmd");
 
@@ -396,13 +448,13 @@ int main (int argc, char** argv) {
     // in any given frame, apply the transformation by the value * degree of knob value
     // call draw frame number of times, once for each frame (the below thing is draw)
     std::vector<std::thread> threads;
-    
+
     for (int i = 0; i < frames; i++) {
     	threads.push_back(std::thread(pass2, i));
     	//pass2(i);
 	}
     for (auto &th : threads) th.join();
-    
+
     if (frames == 1) {
         std::string conv = "convert img/* img/" + basename + ".png";
         std::system(conv.c_str());

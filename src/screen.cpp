@@ -87,7 +87,7 @@ void picture::clear () {
 }
 
 // Getter method
-std::vector<color>& picture::operator[](int index) {
+std::vector<color>& picture::operator[](size_t index) {
 	assert (index < grid.size());
 	return grid[index];
 }

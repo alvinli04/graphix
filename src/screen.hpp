@@ -18,7 +18,6 @@ public:
 	void set (const color& c);
 
     friend std::ostream& operator<<(std::ostream& os, color const& c);
-
 };
 
 class light {
@@ -47,7 +46,7 @@ public:
 
     void clear ();
 
-	std::vector<color>& operator[](int index);
+	std::vector<color>& operator[](size_t index);
     friend std::ostream& operator<<(std::ostream& os, picture const& p);
 	void to_ppm (std::string s);
 
